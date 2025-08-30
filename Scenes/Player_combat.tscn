@@ -1,0 +1,138 @@
+[gd_scene load_steps=21 format=3 uid="uid://x5njiwmdt4me"]
+
+[ext_resource type="Script" uid="uid://bbcc4ndtronrq" path="res://Scripts/Player_combat.gd" id="1_0j78k"]
+[ext_resource type="Texture2D" uid="uid://ckai0mpomxy81" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_down_anim_strip_6.png" id="2_xqbcb"]
+[ext_resource type="Texture2D" uid="uid://blso7ririyrg" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_attack_right_anim_strip_6.png" id="3_xqbcb"]
+[ext_resource type="Texture2D" uid="uid://deywul5tb3382" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_hit_right_anim_strip_3.png" id="4_lohqo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lohqo"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwcbo"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvs85"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6yao"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx088"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb053"]
+atlas = ExtResource("2_xqbcb")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eie4"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3w55"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yynnj"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2eas"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxlgm"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvoh5"]
+atlas = ExtResource("3_xqbcb")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfqvn"]
+atlas = ExtResource("4_lohqo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl4ae"]
+atlas = ExtResource("4_lohqo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vdvl"]
+atlas = ExtResource("4_lohqo")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0eie4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lohqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwcbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvs85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6yao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx088")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb053")
+}],
+"loop": true,
+"name": &"Player_combat_idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eie4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3w55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yynnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2eas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxlgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvoh5")
+}],
+"loop": false,
+"name": &"attack_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfqvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl4ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vdvl")
+}],
+"loop": false,
+"name": &"hit_left",
+"speed": 5.0
+}]
+
+[node name="PlayerCombat" type="CharacterBody2D"]
+script = ExtResource("1_0j78k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0eie4")
+animation = &"hit_left"
+frame = 2
+frame_progress = 1.0

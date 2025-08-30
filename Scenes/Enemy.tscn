@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://wqahus4xleu"]
+
+[ext_resource type="Script" uid="uid://brn87jkqxeku1" path="res://Scripts/Enemy.gd" id="1_wovta"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fd37"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wovta"]
+size = Vector2(2, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1htj"]
+size = Vector2(16, 16)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_wovta")
+enemy_id = "enemy_001"
+enemy_type = "Enemy"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7fd37")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wovta")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_m1htj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

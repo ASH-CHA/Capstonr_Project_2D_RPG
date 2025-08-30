@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg0xnnsw0rtph"]
+
+[ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_fpo0w"]
+[ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="2_gelq6"]
+[ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="3_fpo0w"]
+
+[node name="Combat" type="Node2D"]
+script = ExtResource("1_fpo0w")
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 71.0
+offset_right = 182.0
+offset_bottom = 94.0
+text = "Player Health: 100"
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 321.0
+offset_top = 69.0
+offset_right = 456.0
+offset_bottom = 92.0
+text = "Enemy Health: 30"
+
+[node name="AttackButton" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 4.0
+offset_right = 89.0
+offset_bottom = 35.0
+text = "Attack"
+
+[node name="CombatLog" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 10.0
+offset_right = 343.0
+offset_bottom = 33.0
+text = "Combat Begins"
+
+[node name="PlayerCombat" parent="." instance=ExtResource("2_gelq6")]
+position = Vector2(112, 147)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." instance=ExtResource("3_fpo0w")]
+position = Vector2(382, 137)
+scale = Vector2(5, 5)

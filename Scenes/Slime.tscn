@@ -1,0 +1,206 @@
+[gd_scene load_steps=31 format=3 uid="uid://cw2emlx8wh56i"]
+
+[ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_p1xxi"]
+[ext_resource type="Texture2D" uid="uid://d0ulv6yc2ydta" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkslime_Sprites/pinkslime_idle_anim_all_dir_strip_6.png" id="2_7yyg5"]
+[ext_resource type="Texture2D" uid="uid://krs5jhlnjjw0" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkslime_Sprites/pinkslime_run_anim_anim_all_dir_strip_6.png" id="2_oi5nh"]
+[ext_resource type="Texture2D" uid="uid://rw1f3d85wsfp" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkslime_Sprites/pinkslime_death_anim_all_dir_strip_8.png" id="2_xsyo3"]
+[ext_resource type="Texture2D" uid="uid://dljdohhg1pns" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkslime_Sprites/pinkslime_hit_anim_all_dir_strip_4.png" id="3_oi5nh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aisuu"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tal75"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h816"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nevve"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2nwx"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sadrg"]
+atlas = ExtResource("2_oi5nh")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu4ju"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki3du"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3rtx"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yifxl"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34uwb"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm87h"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa8qf"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g73w3"]
+atlas = ExtResource("2_xsyo3")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paogw"]
+atlas = ExtResource("3_oi5nh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2uv7"]
+atlas = ExtResource("3_oi5nh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oggg7"]
+atlas = ExtResource("3_oi5nh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w3dw"]
+atlas = ExtResource("3_oi5nh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsyo3"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi5nh"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmdr4"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mnvw"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h65gf"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri7b6"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tu4ju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aisuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tal75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h816")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nevve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2nwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sadrg")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tu4ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki3du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3rtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yifxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34uwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm87h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa8qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g73w3")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paogw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2uv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oggg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w3dw")
+}],
+"loop": true,
+"name": &"hit_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsyo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi5nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmdr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mnvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h65gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri7b6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Enemy" instance=ExtResource("1_p1xxi")]
+enemy_id = "slime_001"
+enemy_type = "Slime"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_tu4ju")
+animation = &"attack_left"
