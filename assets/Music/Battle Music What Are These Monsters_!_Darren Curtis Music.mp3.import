@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6ilw3rjun5yd"
+path="res://.godot/imported/Battle Music What Are These Monsters_!_Darren Curtis Music.mp3-10b71d5ce6cd8729e28b629bc3fd228b.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Battle Music What Are These Monsters_!_Darren Curtis Music.mp3"
+dest_files=["res://.godot/imported/Battle Music What Are These Monsters_!_Darren Curtis Music.mp3-10b71d5ce6cd8729e28b629bc3fd228b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
