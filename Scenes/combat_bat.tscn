@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="3_fpo0w"]
 
 [node name="Combat" type="Node2D"]
+position = Vector2(368, 281)
 script = ExtResource("1_fpo0w")
 
 [node name="PlayerHealth" type="Label" parent="."]
@@ -29,10 +30,10 @@ offset_bottom = 35.0
 text = "Attack"
 
 [node name="CombatLog" type="Label" parent="."]
-offset_left = 226.0
-offset_top = 10.0
-offset_right = 343.0
-offset_bottom = 33.0
+offset_left = 185.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 28.0
 text = "Combat Begins"
 
 [node name="PlayerCombat" parent="." instance=ExtResource("2_gelq6")]

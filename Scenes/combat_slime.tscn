@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2emlx8wh56i" path="res://Scenes/Slime.tscn" id="3_7mqlk"]
 
 [node name="Combat" type="Node2D"]
+position = Vector2(365, 270)
 script = ExtResource("1_7mqlk")
 
 [node name="PlayerHealth" type="Label" parent="."]
@@ -29,10 +30,10 @@ offset_bottom = 35.0
 text = "Attack"
 
 [node name="CombatLog" type="Label" parent="."]
-offset_left = 226.0
-offset_top = 10.0
-offset_right = 343.0
-offset_bottom = 33.0
+offset_left = 188.0
+offset_top = 7.0
+offset_right = 305.0
+offset_bottom = 30.0
 text = "Combat Begins"
 
 [node name="PlayerCombat" parent="." instance=ExtResource("2_fytmj")]
