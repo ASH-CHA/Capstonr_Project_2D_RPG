@@ -29,6 +29,13 @@ offset_right = 89.0
 offset_bottom = 35.0
 text = "Attack"
 
+[node name="DefendButton" type="Button" parent="."]
+offset_left = 104.0
+offset_top = 3.0
+offset_right = 169.0
+offset_bottom = 34.0
+text = "Defend"
+
 [node name="CombatLog" type="Label" parent="."]
 offset_left = 188.0
 offset_top = 7.0
