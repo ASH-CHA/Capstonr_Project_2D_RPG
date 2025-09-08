@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://x5njiwmdt4me"]
+[gd_scene load_steps=28 format=3 uid="uid://x5njiwmdt4me"]
 
 [ext_resource type="Script" uid="uid://bbcc4ndtronrq" path="res://Scripts/Player_combat.gd" id="1_0j78k"]
 [ext_resource type="Texture2D" uid="uid://ckai0mpomxy81" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_down_anim_strip_6.png" id="2_xqbcb"]
 [ext_resource type="Texture2D" uid="uid://blso7ririyrg" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_attack_right_anim_strip_6.png" id="3_xqbcb"]
 [ext_resource type="Texture2D" uid="uid://deywul5tb3382" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_hit_right_anim_strip_3.png" id="4_lohqo"]
+[ext_resource type="Texture2D" uid="uid://cwsydmp6s6p3y" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_hit_right_anim_strip_5.png" id="4_qvs85"]
 [ext_resource type="AudioStream" uid="uid://c6ilw3rjun5yd" path="res://assets/Music/Battle Music What Are These Monsters_!_Darren Curtis Music.mp3" id="5_dwcbo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lohqo"]
@@ -53,6 +54,26 @@ region = Rect2(128, 0, 32, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvoh5"]
 atlas = ExtResource("3_xqbcb")
 region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuphc"]
+atlas = ExtResource("4_qvs85")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18glm"]
+atlas = ExtResource("4_qvs85")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khuwm"]
+atlas = ExtResource("4_qvs85")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkutq"]
+atlas = ExtResource("4_qvs85")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpk5q"]
+atlas = ExtResource("4_qvs85")
+region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfqvn"]
 atlas = ExtResource("4_lohqo")
@@ -116,6 +137,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_uuphc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18glm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khuwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkutq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpk5q")
+}],
+"loop": true,
+"name": &"defend_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_hfqvn")
 }, {
 "duration": 1.0,
@@ -135,8 +176,6 @@ script = ExtResource("1_0j78k")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0eie4")
 animation = &"hit_left"
-frame = 2
-frame_progress = 1.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_dwcbo")

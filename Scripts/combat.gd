@@ -16,7 +16,7 @@ var defending = false  # track if player is defending
 
 func _ready():
 	enemy_animated_sprite.play("idle")
-	player_animated_sprite.play("idle")
+	player_animated_sprite.play("Player_combat_idle")
 	
 	# Connect buttons
 	attack_button.pressed.connect(_on_attack_pressed)
@@ -57,7 +57,7 @@ func _on_attack_pressed():
 func _on_defend_pressed():
 	if player_turn:
 		defending = true  # player prepares to defend
-		player_animated_sprite.play("defend") # (insert new anim)
+		player_animated_sprite.play("defend_right") # defends
 		combat_log.text = "You brace yourself for the enemy’s attack!"
 		
 		player_turn = false

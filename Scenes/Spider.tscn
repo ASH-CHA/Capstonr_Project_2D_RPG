@@ -71,6 +71,11 @@ region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_psvc4"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack_left",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oc654")
@@ -141,4 +146,4 @@ enemy_type = "Spider"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_psvc4")
-animation = &"hit_right"
+animation = &"attack_left"

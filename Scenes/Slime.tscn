@@ -204,3 +204,4 @@ enemy_type = "Slime"
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_tu4ju")
 animation = &"attack_left"
+frame_progress = 0.0299055
