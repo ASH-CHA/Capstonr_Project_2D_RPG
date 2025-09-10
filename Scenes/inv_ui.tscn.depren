@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://w02qgidw6o2u"]
+
+[ext_resource type="Script" uid="uid://blgtca0pfsulc" path="res://Scripts/inv_ui.gd" id="1_f2u1w"]
+
+[node name="Inv_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f2u1w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

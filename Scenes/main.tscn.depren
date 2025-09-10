@@ -24,10 +24,6 @@ inv = ExtResource("4_344ge")
 zoom = Vector2(3, 3)
 
 [node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
-offset_left = -38.0
-offset_top = -85.0
-offset_right = 37.0
-offset_bottom = -12.0
 
 [node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
 position = Vector2(-461.775, 26.9896)
