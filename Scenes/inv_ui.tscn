@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://w02qgidw6o2u"]
+
+[ext_resource type="Script" uid="uid://blgtca0pfsulc" path="res://Scripts/inv_ui.gd" id="1_f2u1w"]
+[ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="2_xsetr"]
+[ext_resource type="PackedScene" uid="uid://bxekdl8jmpk7" path="res://Scenes/inv_ui_slot.tscn" id="3_owgac"]
+
+[node name="Inv_UI" type="Control"]
+custom_minimum_size = Vector2(75, 73)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 75.0
+offset_bottom = 73.0
+script = ExtResource("1_f2u1w")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 75.0
+offset_bottom = 73.0
+texture = ExtResource("2_xsetr")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2
+
+[node name="inv_UI_slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_owgac")]
+layout_mode = 2

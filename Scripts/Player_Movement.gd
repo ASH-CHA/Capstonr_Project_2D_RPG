@@ -4,6 +4,8 @@ var direction: Vector2 = Vector2()
 var speed: float = 65.0
 var combat_triggered = false
 
+@export var inv: Inv # add inventory
+
 @onready var animated_sprite_2d = $AnimatedSprite2D
 #@onready var enemy = get_parent().get_node("Spider")
 
