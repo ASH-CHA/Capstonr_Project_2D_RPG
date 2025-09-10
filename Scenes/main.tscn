@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://o25ms4401l4s" path="res://Scenes/Spider.tscn" id="3_8gbba"]
 [ext_resource type="Resource" uid="uid://crtkqyvhsvkk3" path="res://Scenes/player_inv.tres" id="4_344ge"]
 [ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="5_kry3j"]
-[ext_resource type="PackedScene" path="res://Scenes/inv_ui.tscn" id="5_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://w02qgidw6o2u" path="res://Scenes/inv_ui.tscn" id="5_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://cw2emlx8wh56i" path="res://Scenes/Slime.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://b63qu45jga1o6" path="res://Scenes/Desert.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://5hglpv3x38qg" path="res://Scenes/Corruption.tscn" id="8_ynf5e"]
