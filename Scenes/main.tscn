@@ -18,6 +18,12 @@ script = ExtResource("1_21xkr")
 [node name="Town" parent="." instance=ExtResource("1_bo1nx")]
 position = Vector2(-627.775, 84.9896)
 
+[node name="Desert" parent="." instance=ExtResource("7_344ge")]
+position = Vector2(1373.22, 51.9896)
+
+[node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
+position = Vector2(3933.23, 5.9896)
+
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
 position = Vector2(-441.775, 85.9896)
 inv = ExtResource("4_344ge")
@@ -54,9 +60,3 @@ enemy_id = "slime_002"
 [node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
 position = Vector2(-449.775, 120.99)
 enemy_id = "slime_003"
-
-[node name="Desert" parent="." instance=ExtResource("7_344ge")]
-position = Vector2(1373.22, 51.9896)
-
-[node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
-position = Vector2(3933.23, 5.9896)
