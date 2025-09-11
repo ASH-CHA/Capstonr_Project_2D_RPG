@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blgtca0pfsulc" path="res://Scripts/inv_ui.gd" id="1_f2u1w"]
 [ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="2_xsetr"]
-[ext_resource type="PackedScene" uid="uid://bxekdl8jmpk7" path="res://Scenes/inv_ui_slot.tscn" id="3_owgac"]
+[ext_resource type="PackedScene" uid="uid://bmmbsjo7ggvjh" path="res://Scenes/inv_ui_slot.tscn" id="3_owgac"]
 
 [node name="Inv_UI" type="Control"]
 custom_minimum_size = Vector2(75, 73)
