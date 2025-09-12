@@ -1,13 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmmbsjo7ggvjh"]
+[gd_scene load_steps=3 format=3 uid="uid://bmmbsjo7ggvjh"]
 
 [ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_3fq4t"]
+[ext_resource type="Script" uid="uid://dl6c4oi68thte" path="res://Scripts/inv_ui_slot.gd" id="1_dvbtt"]
 
 [node name="inv_UI_slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(16, 16)
 offset_right = 16.0
 offset_bottom = 16.0
+script = ExtResource("1_dvbtt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3fq4t")
 centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]

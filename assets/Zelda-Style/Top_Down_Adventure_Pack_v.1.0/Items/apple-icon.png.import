@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5rmxc4t40pu4"
-path="res://.godot/imported/apple.png-32be73c8aa600ba5b7a947fa4e371253.ctex"
+uid="uid://gwqdf331yq40"
+path="res://.godot/imported/apple-icon.png-c0cdf78e5943927f38b7a85b0fea43fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Items/apple.png"
-dest_files=["res://.godot/imported/apple.png-32be73c8aa600ba5b7a947fa4e371253.ctex"]
+source_file="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Items/apple-icon.png"
+dest_files=["res://.godot/imported/apple-icon.png-c0cdf78e5943927f38b7a85b0fea43fd.ctex"]
 
 [params]
 
