@@ -25,19 +25,6 @@ position = Vector2(1373.22, 51.9896)
 [node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
 position = Vector2(3933.23, 5.9896)
 
-[node name="Player" parent="." instance=ExtResource("2_8gbba")]
-position = Vector2(-441.775, 85.9896)
-inv = ExtResource("4_344ge")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
-
-[node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
-offset_left = -38.0
-offset_top = -85.0
-offset_right = 37.0
-offset_bottom = -12.0
-
 [node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
 position = Vector2(-461.775, 26.9896)
 enemy_id = "bat_002"
@@ -61,6 +48,19 @@ enemy_id = "slime_002"
 [node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
 position = Vector2(-449.775, 120.99)
 enemy_id = "slime_003"
+
+[node name="Player" parent="." instance=ExtResource("2_8gbba")]
+position = Vector2(-441.775, 85.9896)
+inv = ExtResource("4_344ge")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
+offset_left = -38.0
+offset_top = -85.0
+offset_right = 37.0
+offset_bottom = -12.0
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(-301.775, 158.99)
