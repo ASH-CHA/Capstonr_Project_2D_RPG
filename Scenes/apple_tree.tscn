@@ -53,6 +53,13 @@ one_shot = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
+[node name="CollectedNote" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -28.0
+offset_right = 43.0
+offset_bottom = -5.0
+scale = Vector2(0.25, 0.25)
+
 [connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
 [connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]
 [connection signal="timeout" from="growth_timer" to="." method="_on_growth_timer_timeout"]

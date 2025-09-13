@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var collected_note = $CollectedNote
+
 var state = "no apples" # no apples, apples are the only possible states
 var player_in_area = false
 
@@ -22,7 +24,6 @@ func _process(_delta):
 				state = "no apples"
 				drop_apple()
 
-
 func _on_pickable_area_body_entered(body: Node2D) -> void:
 	if body.has_method("_ready"):
 		player_in_area = true
@@ -41,5 +42,12 @@ func drop_apple():
 	apple_instance.global_position = $Marker2D.global_position
 	get_parent().add_child(apple_instance)
 	player.collect(item)
+	collected_note.text = "+1 Apple Collected"
+	await get_tree().create_timer(1.5).timeout
+	collected_note.text = ""
 	await get_tree().create_timer(3).timeout
 	$growth_timer.start()
+	
+	
+func collection_label():
+	collected_note.text = "+1 Apple"
