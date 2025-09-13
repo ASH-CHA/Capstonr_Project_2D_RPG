@@ -14,7 +14,7 @@ func _ready():
 	var player = get_tree().get_root().get_node("Main/Player")
 	player.global_position = GameManager.player_position
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	read_input()
 	move_and_slide()
 	
@@ -64,3 +64,7 @@ func read_input():
 	# Normalize velocity to avoid faster diagonal movement
 	if velocity != Vector2():
 		velocity = velocity.normalized() * speed
+
+# Collect items
+func collect(item):
+	inv.insert(item)
