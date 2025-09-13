@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://x5njiwmdt4me"]
+[gd_scene load_steps=29 format=3 uid="uid://x5njiwmdt4me"]
 
 [ext_resource type="Script" uid="uid://bbcc4ndtronrq" path="res://Scripts/Player_combat.gd" id="1_0j78k"]
 [ext_resource type="Texture2D" uid="uid://ckai0mpomxy81" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_down_anim_strip_6.png" id="2_xqbcb"]
@@ -170,6 +170,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qvs85"]
+radius = 6.0
+
 [node name="PlayerCombat" type="CharacterBody2D"]
 script = ExtResource("1_0j78k")
 
@@ -180,3 +183,7 @@ animation = &"hit_left"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_dwcbo")
 autoplay = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_qvs85")

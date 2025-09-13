@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cy5jaeum0fkgy" path="res://Scenes/Player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://o25ms4401l4s" path="res://Scenes/Spider.tscn" id="3_8gbba"]
-[ext_resource type="Resource" uid="uid://crtkqyvhsvkk3" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Items/player_inv.tres" id="4_344ge"]
+[ext_resource type="Resource" uid="uid://crtkqyvhsvkk3" path="res://Resources/player_inv.tres" id="4_344ge"]
 [ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://w02qgidw6o2u" path="res://Scenes/inv_ui.tscn" id="5_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://cw2emlx8wh56i" path="res://Scenes/Slime.tscn" id="6_21xkr"]

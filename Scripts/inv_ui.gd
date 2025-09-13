@@ -1,6 +1,6 @@
 extends Control
 
-@onready var inv: Inv = preload("res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Items/player_inv.tres")
+@onready var inv: Inv = preload("res://Resources/player_inv.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
 var is_open = false

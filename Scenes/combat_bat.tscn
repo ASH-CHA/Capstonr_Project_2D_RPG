@@ -5,8 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="3_fpo0w"]
 
 [node name="Combat" type="Node2D"]
-position = Vector2(368, 281)
+position = Vector2(351, 220)
 script = ExtResource("1_fpo0w")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -354.0
+offset_top = -222.0
+offset_right = 802.0
+offset_bottom = 802.0
 
 [node name="PlayerHealth" type="Label" parent="."]
 offset_left = 42.0

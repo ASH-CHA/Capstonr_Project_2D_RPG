@@ -8,6 +8,12 @@
 position = Vector2(309, 274)
 script = ExtResource("1_7jmb3")
 
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -306.0
+offset_top = -269.0
+offset_right = 841.0
+offset_bottom = 755.0
+
 [node name="PlayerHealth" type="Label" parent="."]
 offset_left = 42.0
 offset_top = 71.0
