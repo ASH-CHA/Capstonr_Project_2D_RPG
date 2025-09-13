@@ -49,6 +49,15 @@ enemy_id = "slime_002"
 position = Vector2(-449.775, 120.99)
 enemy_id = "slime_003"
 
+[node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-301.775, 158.99)
+
+[node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-545.775, 44.9896)
+
+[node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-1.77499, -24.0104)
+
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
 position = Vector2(-441.775, 85.9896)
 inv = ExtResource("4_344ge")
@@ -61,12 +70,3 @@ offset_left = -38.0
 offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
-
-[node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-301.775, 158.99)
-
-[node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-545.775, 44.9896)
-
-[node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-1.77499, -24.0104)
