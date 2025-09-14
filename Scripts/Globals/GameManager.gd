@@ -7,6 +7,7 @@ var enemy_stats = {
 }
 
 var player_position : Vector2
+var enemy_position : Vector2
 var defeated_enemies = {}
 var last_enemy_id = null
 var last_enemy_type = ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://x5njiwmdt4me"]
+[gd_scene load_steps=38 format=3 uid="uid://x5njiwmdt4me"]
 
 [ext_resource type="Script" uid="uid://bbcc4ndtronrq" path="res://Scripts/Player_combat.gd" id="1_0j78k"]
 [ext_resource type="Texture2D" uid="uid://636yeb7166ao" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_right_anim_strip_6.png" id="2_qvs85"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://deywul5tb3382" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_hit_right_anim_strip_3.png" id="4_lohqo"]
 [ext_resource type="Texture2D" uid="uid://cwsydmp6s6p3y" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_hit_right_anim_strip_5.png" id="4_qvs85"]
 [ext_resource type="AudioStream" uid="uid://c6ilw3rjun5yd" path="res://assets/Music/Battle Music What Are These Monsters_!_Darren Curtis Music.mp3" id="5_dwcbo"]
+[ext_resource type="Texture2D" uid="uid://cflnpps1h3cpd" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_left_anim_strip_6.png" id="6_b6yao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6yao"]
 atlas = ExtResource("2_qvs85")
@@ -86,6 +87,30 @@ region = Rect2(16, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4vdvl"]
 atlas = ExtResource("4_lohqo")
 region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3drer"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygmqp"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5evg"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6u0a"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7sov"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh50t"]
+atlas = ExtResource("6_b6yao")
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eie4"]
 animations = [{
@@ -168,10 +193,66 @@ animations = [{
 "loop": false,
 "name": &"hit_left",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3drer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygmqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5evg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6u0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7sov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh50t")
+}],
+"loop": true,
+"name": &"run_left",
+"speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qvs85"]
-radius = 6.0
+[sub_resource type="Animation" id="Animation_i8dg2"]
+resource_name = "run_away"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-60, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mp68k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r8ajf"]
+_data = {
+&"RESET": SubResource("Animation_mp68k"),
+&"run_away": SubResource("Animation_i8dg2")
+}
 
 [node name="PlayerCombat" type="CharacterBody2D"]
 script = ExtResource("1_0j78k")
@@ -179,11 +260,13 @@ script = ExtResource("1_0j78k")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0eie4")
 animation = &"Player_combat_idle"
+frame_progress = 0.912797
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_dwcbo")
 autoplay = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
-shape = SubResource("CircleShape2D_qvs85")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r8ajf")
+}

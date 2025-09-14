@@ -1,18 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj5rq1m3vosnn"]
+[gd_scene load_steps=5 format=3 uid="uid://cj5rq1m3vosnn"]
 
 [ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_7jmb3"]
+[ext_resource type="Texture2D" uid="uid://ce7sjmrdmoifv" path="res://assets/basic_battle_background.png" id="2_i5bgv"]
 [ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="3_4ln8h"]
 [ext_resource type="PackedScene" uid="uid://o25ms4401l4s" path="res://Scenes/Spider.tscn" id="3_kvtbr"]
 
 [node name="Combat" type="Node2D"]
-position = Vector2(309, 274)
+position = Vector2(201, 153)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_7jmb3")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_left = -306.0
-offset_top = -269.0
-offset_right = 841.0
-offset_bottom = 755.0
+offset_left = -133.0
+offset_top = -103.0
+offset_right = 635.0
+offset_bottom = 328.0
+texture = ExtResource("2_i5bgv")
+expand_mode = 1
 
 [node name="PlayerHealth" type="Label" parent="."]
 offset_left = 42.0
@@ -29,25 +33,36 @@ offset_bottom = 92.0
 text = "Enemy Health: 30"
 
 [node name="AttackButton" type="Button" parent="."]
-offset_left = 31.0
-offset_top = 4.0
-offset_right = 89.0
-offset_bottom = 35.0
+offset_left = 135.0
+offset_top = 217.0
+offset_right = 197.0
+offset_bottom = 248.0
+size_flags_horizontal = 0
 text = "Attack"
 
 [node name="DefendButton" type="Button" parent="."]
-offset_left = 102.0
-offset_top = 4.0
-offset_right = 167.0
-offset_bottom = 35.0
+offset_left = 216.0
+offset_top = 217.0
+offset_right = 281.0
+offset_bottom = 248.0
+size_flags_horizontal = 4
 text = "Defend"
 
+[node name="RunButton" type="Button" parent="."]
+offset_left = 301.0
+offset_top = 217.0
+offset_right = 363.0
+offset_bottom = 248.0
+size_flags_horizontal = 8
+text = "Run"
+
 [node name="CombatLog" type="Label" parent="."]
-offset_left = 181.0
+offset_left = 32.0
 offset_top = 8.0
-offset_right = 298.0
+offset_right = 452.0
 offset_bottom = 31.0
 text = "Combat Begins"
+horizontal_alignment = 1
 
 [node name="PlayerCombat" parent="." instance=ExtResource("3_4ln8h")]
 position = Vector2(112, 147)

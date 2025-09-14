@@ -20,6 +20,7 @@ func _ready():
 func _on_body_entered(body):
 	if body.name == "Player":
 		GameManager.player_position = body.global_position
+		GameManager.enemy_position = body.global_position
 		GameManager.last_enemy_id = enemy_id
 		GameManager.last_enemy_type = enemy_type
 		print("Starting combat!")

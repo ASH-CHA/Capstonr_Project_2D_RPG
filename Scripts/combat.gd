@@ -8,11 +8,13 @@ var defending = false  # track if player is defending
 @onready var player_health_label = $PlayerHealth
 @onready var enemy_health_label = $EnemyHealth
 @onready var attack_button = $AttackButton
-@onready var defend_button = $DefendButton 
+@onready var defend_button = $DefendButton
+@onready var run_button = $RunButton
 @onready var combat_log = $CombatLog
 
 @onready var enemy_animated_sprite = $Enemy/AnimatedSprite2D
 @onready var player_animated_sprite = $PlayerCombat/AnimatedSprite2D
+@onready var player_run_animation = $PlayerCombat/AnimationPlayer
 
 func _ready():
 	enemy_animated_sprite.play("idle")
@@ -20,7 +22,8 @@ func _ready():
 	
 	# Connect buttons
 	attack_button.pressed.connect(_on_attack_pressed)
-	defend_button.pressed.connect(_on_defend_pressed)  # NEW connection
+	defend_button.pressed.connect(_on_defend_pressed)
+	run_button.pressed.connect(_on_run_pressed)
 	
 	enemy_hp = GameManager.enemy_stats[GameManager.last_enemy_type]
 	update_ui()
@@ -38,6 +41,7 @@ func _on_attack_pressed():
 			combat_log.text = "Victory! Enemy defeated!"
 			attack_button.disabled = true
 			defend_button.disabled = true
+			run_button.disabled = true
 			enemy_animated_sprite.play("death")
 			
 			# Mark enemy defeated
@@ -48,7 +52,7 @@ func _on_attack_pressed():
 			get_tree().create_timer(1.5).timeout.connect(_return_to_world)
 		else:
 			player_turn = false
-			await get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
+			get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
 	
 	update_ui()
 
@@ -61,8 +65,20 @@ func _on_defend_pressed():
 		combat_log.text = "You brace yourself for the enemy’s attack!"
 		
 		player_turn = false
-		await get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
+		get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
 
+# Run
+func _on_run_pressed():
+	if player_turn:
+		player_animated_sprite.play("run_left")
+		player_run_animation.play("run_away")
+		combat_log.text = "You got away safely!"
+		
+		# Change player's position close to enemy to avoid a combat loop
+		GameManager.player_position = GameManager.enemy_position - Vector2(15,0)
+		
+		get_tree().create_timer(1.5).timeout.connect(_return_to_world)
+	update_ui()
 
 # ENEMY ATTACK
 func _enemy_attack():
@@ -84,6 +100,7 @@ func _enemy_attack():
 		combat_log.text = "Defeat! You have fallen!"
 		attack_button.disabled = true
 		defend_button.disabled = true
+		run_button.disabled = true
 		get_tree().create_timer(1.5).timeout.connect(_game_over)
 	else:
 		player_turn = true
