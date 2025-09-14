@@ -75,7 +75,7 @@ func _on_run_pressed():
 		combat_log.text = "You got away safely!"
 		
 		# Change player's position close to enemy to avoid a combat loop
-		GameManager.player_position = GameManager.enemy_position - Vector2(15,0)
+		GameManager.player_position = GameManager.enemy_position - Vector2(20,0)
 		
 		get_tree().create_timer(1.5).timeout.connect(_return_to_world)
 	update_ui()
