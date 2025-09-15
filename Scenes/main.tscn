@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=13 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b63qu45jga1o6" path="res://Scenes/Desert.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://5hglpv3x38qg" path="res://Scenes/Corruption.tscn" id="8_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://jogmavtrv7fu" path="res://Scenes/npc.tscn" id="12_6iyac"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(462.775, -69.9896)
@@ -70,3 +71,6 @@ offset_left = -38.0
 offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
+
+[node name="npc" parent="." instance=ExtResource("12_6iyac")]
+position = Vector2(-475.775, -94.0104)
