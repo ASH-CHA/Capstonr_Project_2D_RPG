@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx2idsw3l7mxr"]
+
+[ext_resource type="Script" uid="uid://1cse2ppbj4ap" path="res://Scenes/main_menu.gd" id="1_b7rmo"]
+[ext_resource type="FontFile" uid="uid://be4vexhesakde" path="res://Resources/Morgan.ttf" id="1_c4tk2"]
+[ext_resource type="Texture2D" uid="uid://bcbsvtjjoso73" path="res://Resources/Main_menu_screen.png" id="1_rmbjf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7rmo"]
+texture = ExtResource("1_rmbjf")
+texture_margin_top = 148.0
+modulate_color = Color(1, 0.101961, 0.396078, 0.568627)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hckgo"]
+bg_color = Color(1, 0.810684, 0.74634, 0.745098)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7rmo")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 0.975405, 0.962992, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b7rmo")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.5
+offset_top = -207.0
+offset_right = 452.5
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.99, 0.9306, 0.93159, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_c4tk2")
+theme_override_font_sizes/font_size = 85
+text = "A Light In The Darkness"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.492
+anchor_top = 0.826
+anchor_right = 0.492
+anchor_bottom = 0.826
+offset_left = -233.26
+offset_top = -63.248
+offset_right = 228.74
+offset_bottom = 99.752
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 33
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 335.0
+offset_top = 472.0
+offset_right = 797.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0, 0.0117647, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hckgo")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 338.0
+offset_top = 546.0
+offset_right = 800.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0, 0.0117647, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hckgo")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
