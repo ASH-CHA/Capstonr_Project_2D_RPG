@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=4 uid="uid://bu1spt01bh4qf"]
+
+[ext_resource type="Texture2D" uid="uid://ddli0tlfcf8sr" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Overworld_Tileset.png" id="1_4tfxk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5fvaq"]
+texture = ExtResource("1_4tfxk")
+14:5/0 = 0
+14:6/0 = 0
+14:7/0 = 0
+14:8/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+17:8/0 = 0
+17:7/0 = 0
+17:6/0 = 0
+17:5/0 = 0
+16:5/0 = 0
+15:5/0 = 0
+16:6/0 = 0
+15:6/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+10:9/0 = 0
+10:10/0 = 0
+10:11/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+17:11/0 = 0
+17:10/0 = 0
+16:10/0 = 0
+15:10/0 = 0
+14:10/0 = 0
+13:10/0 = 0
+12:10/0 = 0
+11:10/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+13:11/0 = 0
+12:11/0 = 0
+11:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ocqn4"]
+sources/0 = SubResource("TileSetAtlasSource_5fvaq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugeqn"]
+texture = ExtResource("1_4tfxk")
+15:10/0 = 0
+15:11/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+17:11/0 = 0
+17:10/0 = 0
+16:10/0 = 0
+16:11/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+13:10/0 = 0
+12:10/0 = 0
+11:10/0 = 0
+10:10/0 = 0
+10:11/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+14:11/0 = 0
+13:11/0 = 0
+14:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_707ni"]
+sources/0 = SubResource("TileSetAtlasSource_ugeqn")
+
+[node name="house_hero" type="Node2D"]
+
+[node name="Room" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAP//AAAOAAUAAAAAAAAAAAAOAAYAAAAAAAEAAAAOAAcAAAAAAAIAAAAOAAgAAAABAAIAAAAPAAgAAAACAAIAAAAQAAgAAAAHAP//AAARAAUAAAABAP//AAAPAAUAAAACAP//AAAPAAUAAAADAP//AAAPAAUAAAAGAP//AAAQAAUAAAAFAP//AAAQAAUAAAAEAP//AAAQAAUAAAABAAAAAAAPAAYAAAACAAAAAAAPAAYAAAADAAAAAAAPAAYAAAAEAAAAAAAPAAYAAAAFAAAAAAAPAAYAAAAGAAAAAAAPAAYAAAAGAAEAAAAQAAcAAAABAAEAAAAPAAcAAAACAAEAAAAPAAcAAAAFAAEAAAAQAAcAAAAEAAEAAAAQAAcAAAADAAEAAAAPAAcAAAAHAAAAAAARAAYAAAAHAAEAAAARAAcAAAAHAAIAAAARAAgAAAAHAAMAAAARAAgAAAAHAAQAAAARAAgAAAAAAAMAAAAOAAgAAAAAAAQAAAAOAAgAAAAAAAUAAAAOAAkAAAAHAAUAAAARAAkAAAAGAAUAAAAQAAkAAAAFAAUAAAAQAAkAAAABAAUAAAAPAAkAAAACAAUAAAAPAAkAAAAEAAUAAAAQAAkAAAADAAUAAAAPAAkAAAA=")
+tile_set = SubResource("TileSet_ocqn4")
+
+[node name="floor" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAIAAAAPAAoAAAABAAMAAAAPAAsAAAABAAQAAAAPAAwAAAACAAIAAAAQAAoAAAACAAMAAAAQAAsAAAACAAQAAAAQAAwAAAADAAIAAAARAAoAAAADAAMAAAARAAsAAAADAAQAAAARAAwAAAAFAAIAAAAMAAoAAAAGAAIAAAANAAoAAAAGAAQAAAAKAAoAAAAGAAMAAAAKAAkAAAAFAAQAAAALAAkAAAAHAAQAAAAMAAkAAAAFAAAAAAAKAAwAAAADAAAAAAAKAAsAAAACAAAAAAAKAAsAAAABAAAAAAAKAAsAAAA=")
+tile_set = SubResource("TileSet_707ni")
