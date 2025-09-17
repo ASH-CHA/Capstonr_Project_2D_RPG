@@ -19,76 +19,68 @@ position = Vector2(462.775, -69.9896)
 script = ExtResource("1_21xkr")
 
 [node name="Town" parent="." instance=ExtResource("1_bo1nx")]
-visible = false
-position = Vector2(-627.775, 84.9896)
+position = Vector2(-653.775, 118.99)
 script = ExtResource("3_fdnlq")
 
 [node name="Desert" parent="." instance=ExtResource("7_344ge")]
-visible = false
 position = Vector2(1373.22, 51.9896)
 
 [node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
-visible = false
 position = Vector2(3933.23, 5.9896)
 
 [node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
-visible = false
 position = Vector2(-461.775, 26.9896)
 enemy_id = "bat_002"
 
 [node name="Enemy2" parent="." instance=ExtResource("5_kry3j")]
-visible = false
 position = Vector2(-420.775, 28.9896)
 enemy_id = "bat_003"
 
 [node name="Enemy3" parent="." instance=ExtResource("3_8gbba")]
-visible = false
 position = Vector2(-372.775, 57.9896)
 enemy_id = "spider_002"
 
 [node name="Enemy4" parent="." instance=ExtResource("3_8gbba")]
-visible = false
 position = Vector2(-371.775, 94.9896)
 enemy_id = "spider_003"
 
 [node name="Enemy5" parent="." instance=ExtResource("6_21xkr")]
-visible = false
 position = Vector2(-410.775, 114.99)
 enemy_id = "slime_002"
 
 [node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
-visible = false
 position = Vector2(-449.775, 120.99)
 enemy_id = "slime_003"
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
-visible = false
 position = Vector2(-301.775, 158.99)
 
 [node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-visible = false
 position = Vector2(-545.775, 44.9896)
 
 [node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
-visible = false
 position = Vector2(-1.77499, -24.0104)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
-visible = false
 position = Vector2(-441.775, 85.9896)
 inv = ExtResource("4_344ge")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-visible = false
 zoom = Vector2(3, 3)
 
 [node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
-visible = false
 offset_left = -38.0
 offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
 
 [node name="npc" parent="." instance=ExtResource("12_6iyac")]
-visible = false
 position = Vector2(-475.775, -94.0104)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+
+[node name="Collision_Heron_House" type="CollisionPolygon2D" parent="Collision"]
+polygon = PackedVector2Array(-1042.78, 246.99, -1040.78, 241.99, -1096.78, 239.99, -1096.78, 157.99, -998.775, 158.99, -992.775, 160.99, -993.775, 242.99, -1023.78, 242.99, -1023.78, 248.99, -990.775, 247.99, -989.775, 161.99, -994.775, 155.99, -1100.78, 154.99, -1104.78, 158.99, -1103.78, 245.99, -1099.78, 249.99, -1039.78, 250.99)
+
+[node name="Collision_Town" type="CollisionPolygon2D" parent="Collision"]
+polygon = PackedVector2Array(-1246.78, 365.99, 51.225, 370.99, 51.225, -191.01, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)

@@ -1,7 +1,7 @@
 extends Node2D
 
-signal world_changed(world_name)
-var entered = false
+#signal world_changed(world_name)
+#var entered = false
 
 #export (String) var world_name = "town"
 
