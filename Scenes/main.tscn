@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=15 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -12,58 +12,57 @@
 [ext_resource type="PackedScene" uid="uid://b63qu45jga1o6" path="res://Scenes/Desert.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://5hglpv3x38qg" path="res://Scenes/Corruption.tscn" id="8_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
-[ext_resource type="PackedScene" uid="uid://jogmavtrv7fu" path="res://Scenes/npc.tscn" id="12_6iyac"]
+[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://lwcqvmhq8qu8" path="res://Scenes/village_chief.tscn" id="13_jkdf5"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(462.775, -69.9896)
 script = ExtResource("1_21xkr")
 
-[node name="fade_transition" parent="." instance=ExtResource("2_fdnlq")]
-
 [node name="Town" parent="." instance=ExtResource("1_bo1nx")]
-position = Vector2(-627.775, 84.9896)
+position = Vector2(-85.775, -61.0104)
 
 [node name="Desert" parent="." instance=ExtResource("7_344ge")]
-position = Vector2(1373.22, 51.9896)
+position = Vector2(1988.22, -53.0104)
 
 [node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
-position = Vector2(3933.23, 5.9896)
+position = Vector2(4545.23, -84.0104)
 
 [node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
-position = Vector2(-461.775, 26.9896)
+position = Vector2(504.225, -174.01)
 enemy_id = "bat_002"
 
 [node name="Enemy2" parent="." instance=ExtResource("5_kry3j")]
-position = Vector2(-420.775, 28.9896)
+position = Vector2(543.225, -174.01)
 enemy_id = "bat_003"
 
 [node name="Enemy3" parent="." instance=ExtResource("3_8gbba")]
-position = Vector2(-372.775, 57.9896)
+position = Vector2(584.225, -155.01)
 enemy_id = "spider_002"
 
 [node name="Enemy4" parent="." instance=ExtResource("3_8gbba")]
-position = Vector2(-371.775, 94.9896)
+position = Vector2(583.225, -104.01)
 enemy_id = "spider_003"
 
 [node name="Enemy5" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(-410.775, 114.99)
+position = Vector2(544.225, -78.0104)
 enemy_id = "slime_002"
 
 [node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(-449.775, 120.99)
+position = Vector2(499.225, -78.0104)
 enemy_id = "slime_003"
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-301.775, 158.99)
+position = Vector2(220.225, -75.0104)
 
 [node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-545.775, 44.9896)
+position = Vector2(553.225, -228.01)
 
 [node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-1.77499, -24.0104)
+position = Vector2(1.22501, -116.01)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
-position = Vector2(-441.775, 85.9896)
+position = Vector2(-462.775, 73.9896)
 inv = ExtResource("4_344ge")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -71,9 +70,18 @@ zoom = Vector2(3, 3)
 
 [node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
 offset_left = -38.0
-offset_top = -85.0
+offset_top = -88.0
 offset_right = 37.0
-offset_bottom = -12.0
+offset_bottom = -15.0
 
-[node name="npc" parent="." instance=ExtResource("12_6iyac")]
-position = Vector2(-477.775, -94.0104)
+[node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
+position = Vector2(66.225, -245.01)
+
+[node name="village_chief" parent="." instance=ExtResource("13_jkdf5")]
+position = Vector2(449.225, -128.01)
+
+[node name="fade_transition" parent="." instance=ExtResource("2_fdnlq")]
+offset_left = -663.0
+offset_top = -39.0
+offset_right = -266.0
+offset_bottom = 191.0

@@ -47,7 +47,7 @@ func _process(delta):
 	# Press the 'c' key to activate
 	if Input.is_action_just_pressed("chat"):
 		print("chatting with npc")
-		$Dialogue.start()
+		$villager_dialogue.start()
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("idle")
