@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://bss6jq6fff0f2"]
+
+[ext_resource type="Texture2D" uid="uid://dnjcsp38pxvjl" path="res://assets/npcs/Human-Worker-Cyan.png" id="1_h78ua"]
+[ext_resource type="Script" uid="uid://baluldlqt2qra" path="res://Scripts/villager_near_tree.gd" id="1_kwrg8"]
+[ext_resource type="PackedScene" uid="uid://bnykuubfhbwpc" path="res://Dialogue/villager_near_tree_dialogue.tscn" id="3_nf1og"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwrg8"]
+atlas = ExtResource("1_h78ua")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf1og"]
+atlas = ExtResource("1_h78ua")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h78ua"]
+atlas = ExtResource("1_h78ua")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0qxq"]
+atlas = ExtResource("1_h78ua")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0qxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwrg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf1og")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h78ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0qxq")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_27gys"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h78ua"]
+radius = 19.0
+
+[node name="villager_near_tree" type="CharacterBody2D"]
+script = ExtResource("1_kwrg8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u0qxq")
+animation = &"idle"
+frame_progress = 0.0165049
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_27gys")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_h78ua")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="villager_near_tree_dialogue" parent="." instance=ExtResource("3_nf1og")]
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="villager_near_tree_dialogue" to="." method="_on_villager_near_tree_dialogue_dialogue_finished"]

@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var collected_note = $CollectedNote
 
-var state = "no apples" # no apples, apples are the only possible states
+var state = "apples" # no apples, apples are the only possible states
 var player_in_area = false
 
 var apple = preload("res://Scenes/apple_collectable.tscn")
@@ -48,6 +48,6 @@ func drop_apple():
 	await get_tree().create_timer(3).timeout
 	$growth_timer.start()
 	
-	
+
 func collection_label():
 	collected_note.text = "+1 Apple"

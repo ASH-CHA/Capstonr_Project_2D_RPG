@@ -1,4 +1,6 @@
 [
 	{"name": "Village Chief", "text": "Ah, Heron, you’ve finally awakened."},
-	{"name": "Village Chief", "text": "Your journey begins here. You must learn to defend yourself against Chaos’s forces."}
+	{"name": "Village Chief", "text": "Your journey begins here. You must learn to ATTACK and DEFEND yourself against Malakron’s forces."},
+	{"name": "Village Chief", "text": "Approach the monsters to begin combat."},
+	{"name": "Village Chief", "text": "If your situation is dire, you may run away."}
 ]

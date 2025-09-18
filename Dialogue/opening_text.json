@@ -1,5 +1,7 @@
 [
 	{"text": "Welcome to Mora, young traveler."},
 	{"text": "This land has long been plagued by the shadows of Chaos."},
-	{"text": "Use WASD to move"}
+	{"text": "Use WASD keys to move."},
+	{"text": "Find a villager of this town."},
+	{"text": "Use the C key to interact with others."}
 ]

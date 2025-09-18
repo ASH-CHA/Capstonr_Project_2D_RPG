@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-#const speed = 30
 var is_chatting = false
 
 var player
@@ -14,10 +13,11 @@ func _process(_delta):
 	
 	# Press the 'c' key to activate
 	if Input.is_action_just_pressed("chat"):
+		$AnimatedSprite2D.play("idle_left")
 		print("chatting with npc")
-		$village_chief_dialogue.start()
+		$village_soldier_dialogue.start()
 		is_chatting = true
-		$AnimatedSprite2D.play("idle")
+		#$AnimatedSprite2D.play("idle_left")
 
 func choose(array):
 	array.shuffle()
@@ -39,5 +39,5 @@ func _on_chat_detection_area_body_exited(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 
-func _on_village_chief_dialogue_dialogue_finished() -> void:
+func _on_village_soldier_dialogue_dialogue_finished() -> void:
 	is_chatting = false

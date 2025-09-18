@@ -31,7 +31,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -42,7 +42,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bap51"]
@@ -57,7 +57,7 @@ script = ExtResource("1_gsw4h")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8q5y8")
 animation = &"idle_right"
-frame_progress = 0.42021
+frame_progress = 0.725761
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bap51")
@@ -71,3 +71,8 @@ shape = SubResource("CircleShape2D_syw8l")
 autostart = true
 
 [node name="village_chief_dialogue" parent="." instance=ExtResource("3_gsw4h")]
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="village_chief_dialogue" to="." method="_on_village_chief_dialogue_dialogue_finished"]
