@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=3 uid="uid://dgdk28k4cf1ie"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://bem7x70qeeem6"]
+>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence)
 
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
 [ext_resource type="Script" uid="uid://wmb54djp0jpg" path="res://Scripts/main.gd" id="1_ynf5e"]
@@ -8,14 +12,21 @@
 [ext_resource type="PackedScene" uid="uid://b63qu45jga1o6" path="res://Scenes/Desert.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://5hglpv3x38qg" path="res://Scenes/Corruption.tscn" id="8_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://1raa8224xqlp" path="res://Dialogue/village_soldier_dialogue.tscn" id="12_6iyac"]
 [ext_resource type="PackedScene" uid="uid://lwcqvmhq8qu8" path="res://Scenes/village_chief.tscn" id="13_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://c4t7ugl6qlkoa" path="res://Scenes/villager_near_tree.tscn" id="13_wsu2k"]
+=======
+[ext_resource type="PackedScene" uid="uid://jogmavtrv7fu" path="res://Scenes/npc.tscn" id="12_6iyac"]
+>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ynf5e")
 
+[node name="fade_transition" parent="." instance=ExtResource("2_fdnlq")]
+
 [node name="Town" parent="." instance=ExtResource("1_bo1nx")]
+<<<<<<< HEAD
 position = Vector2(378, -129)
 
 [node name="Desert" parent="." instance=ExtResource("7_344ge")]
@@ -62,3 +73,61 @@ offset_left = 1017.0
 offset_top = -226.0
 offset_right = 1057.0
 offset_bottom = -186.0
+=======
+position = Vector2(-627.775, 84.9896)
+
+[node name="Desert" parent="." instance=ExtResource("7_344ge")]
+position = Vector2(1373.22, 51.9896)
+
+[node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
+position = Vector2(3933.23, 5.9896)
+
+[node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(-461.775, 26.9896)
+enemy_id = "bat_002"
+
+[node name="Enemy2" parent="." instance=ExtResource("5_kry3j")]
+position = Vector2(-420.775, 28.9896)
+enemy_id = "bat_003"
+
+[node name="Enemy3" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(-372.775, 57.9896)
+enemy_id = "spider_002"
+
+[node name="Enemy4" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(-371.775, 94.9896)
+enemy_id = "spider_003"
+
+[node name="Enemy5" parent="." instance=ExtResource("6_21xkr")]
+position = Vector2(-410.775, 114.99)
+enemy_id = "slime_002"
+
+[node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
+position = Vector2(-449.775, 120.99)
+enemy_id = "slime_003"
+
+[node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-301.775, 158.99)
+
+[node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-545.775, 44.9896)
+
+[node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-1.77499, -24.0104)
+
+[node name="Player" parent="." instance=ExtResource("2_8gbba")]
+position = Vector2(-441.775, 85.9896)
+inv = ExtResource("4_344ge")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Inv_UI" parent="Player" instance=ExtResource("5_ynf5e")]
+offset_left = -38.0
+offset_top = -85.0
+offset_right = 37.0
+offset_bottom = -12.0
+
+[node name="npc" parent="." instance=ExtResource("12_6iyac")]
+position = Vector2(-477.775, -94.0104)
+>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence)
