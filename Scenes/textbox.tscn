@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp7kq2qe288ho"]
+[gd_scene load_steps=3 format=3 uid="uid://cnhtwwou2or2a"]
 
-[ext_resource type="Script" uid="uid://bhim0k3q8gjhd" path="res://Scripts/textbox.gd" id="1_i40gg"]
+[ext_resource type="Script" path="res://Scripts/textbox.gd" id="1_i40gg"]
 [ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_psw4q"]
 
 [node name="Textbox" type="Control"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bss6jq6fff0f2"]
+[gd_scene load_steps=11 format=3 uid="uid://c4t7ugl6qlkoa"]
 
 [ext_resource type="Texture2D" uid="uid://dnjcsp38pxvjl" path="res://assets/npcs/Human-Worker-Cyan.png" id="1_h78ua"]
-[ext_resource type="Script" uid="uid://baluldlqt2qra" path="res://Scripts/villager_near_tree.gd" id="1_kwrg8"]
+[ext_resource type="Script" path="res://Scripts/villager_near_tree.gd" id="1_kwrg8"]
 [ext_resource type="PackedScene" uid="uid://bnykuubfhbwpc" path="res://Dialogue/villager_near_tree_dialogue.tscn" id="3_nf1og"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwrg8"]
