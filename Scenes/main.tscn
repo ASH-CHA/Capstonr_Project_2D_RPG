@@ -108,6 +108,3 @@ polygon = PackedVector2Array(-1042.78, 246.99, -1040.78, 241.99, -1096.78, 239.9
 [node name="Collision_Town" type="CollisionPolygon2D" parent="Collision"]
 position = Vector2(584, -187)
 polygon = PackedVector2Array(-1246.78, 365.99, 264, 375, 269, -209, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)
-
-[node name="Enemy10" parent="." instance=ExtResource("19_fevyy")]
-position = Vector2(-280, 45)
