@@ -188,4 +188,3 @@ autostart = true
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="villager_dialogue" to="." method="_on_villager_dialogue_dialogue_finished"]

@@ -79,8 +79,3 @@ func _on_timer_timeout() -> void:
 func _on_dialogue_dialogue_finished() -> void:
 	is_chatting = false
 	is_roaming = true
-
-
-func _on_villager_dialogue_dialogue_finished() -> void:
-	is_chatting = false
-	is_roaming = true
