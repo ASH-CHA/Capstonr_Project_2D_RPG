@@ -1,23 +1,13 @@
-<<<<<<<< HEAD:Dialogue/villager_near_tree_dialogue.tscn
 [gd_scene load_steps=3 format=3 uid="uid://bnykuubfhbwpc"]
 
 [ext_resource type="Script" uid="uid://dh4w1605o1ibx" path="res://Dialogue/villager_near_tree_dialogue.gd" id="1_c7wqw"]
 [ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_xyvxd"]
 
 [node name="villager_near_tree_dialogue" type="Control"]
-========
-[gd_scene load_steps=3 format=3 uid="uid://2sbt6f2x3tag"]
-
-[ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_1ei20"]
-[ext_resource type="Script" uid="uid://caw814phnaw8w" path="res://Dialogue/dialogue_player.gd" id="1_je2oo"]
-
-[node name="Dialogue" type="Control"]
->>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence):Dialogue/dialogue.tscn
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-<<<<<<<< HEAD:Dialogue/villager_near_tree_dialogue.tscn
 script = ExtResource("1_c7wqw")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -27,17 +17,6 @@ offset_top = -52.0
 offset_right = 76.0
 offset_bottom = -12.0
 texture = ExtResource("1_xyvxd")
-========
-script = ExtResource("1_je2oo")
-
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = -40.0
-offset_top = -53.0
-offset_right = 40.0
-offset_bottom = -13.0
-texture = ExtResource("1_1ei20")
->>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence):Dialogue/dialogue.tscn
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
@@ -47,33 +26,16 @@ patch_margin_bottom = 3
 layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
-<<<<<<<< HEAD:Dialogue/villager_near_tree_dialogue.tscn
 offset_right = 183.0
 offset_bottom = 29.0
 scale = Vector2(0.4, 0.4)
 text = "Name: "
-========
-offset_right = 151.0
-offset_bottom = 24.0
-scale = Vector2(0.5, 0.5)
-text = "Name:"
-metadata/_edit_lock_ = true
->>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence):Dialogue/dialogue.tscn
 
 [node name="Text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
 offset_left = 3.0
-<<<<<<<< HEAD:Dialogue/villager_near_tree_dialogue.tscn
 offset_top = 11.0
 offset_right = 246.0
 offset_bottom = 94.0
 scale = Vector2(0.3, 0.3)
 text = "Chatting: "
-========
-offset_top = 15.0
-offset_right = 187.0
-offset_bottom = 66.0
-scale = Vector2(0.4, 0.4)
-text = "Chatting...."
-metadata/_edit_lock_ = true
->>>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence):Dialogue/dialogue.tscn
