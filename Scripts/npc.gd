@@ -47,10 +47,6 @@ func _process(delta):
 	# Press the 'c' key to activate
 	if Input.is_action_just_pressed("chat"):
 		print("chatting with npc")
-<<<<<<< HEAD
-=======
-		$Dialogue.start()
->>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence)
 		is_roaming = false
 		is_chatting = true
 		$AnimatedSprite2D.play("idle")

@@ -96,18 +96,5 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_hckgo")
 text = "Exit"
 
-<<<<<<< HEAD
-=======
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_00u4r")
-autoplay = true
-
-[node name="fade_transition" parent="." instance=ExtResource("5_anlgx")]
-visible = false
-layout_mode = 0
-
-[node name="fade_timer" type="Timer" parent="fade_transition"]
-
->>>>>>> parent of 4947d90 (Added Village Chief NPC / Began tutorial sequence)
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
