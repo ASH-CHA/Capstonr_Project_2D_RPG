@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://q04gidmj2vxw"]
+
+[ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_pnt0o"]
+[ext_resource type="Texture2D" uid="uid://ce7sjmrdmoifv" path="res://assets/basic_battle_background.png" id="2_70l77"]
+[ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="2_xl0gf"]
+[ext_resource type="PackedScene" uid="uid://bq0ic8djpjude" path="res://Scenes/RedPeonOrc.tscn" id="3_70l77"]
+
+[node name="Combat" type="Node2D"]
+position = Vector2(-298, -153)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_pnt0o")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 195.0
+offset_top = 101.0
+offset_right = 968.0
+offset_bottom = 536.0
+texture = ExtResource("2_70l77")
+expand_mode = 1
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 370.667
+offset_top = 244.0
+offset_right = 510.667
+offset_bottom = 267.0
+text = "Player Health: 100"
+horizontal_alignment = 1
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 681.333
+offset_top = 244.0
+offset_right = 816.333
+offset_bottom = 267.0
+text = "Enemy Health: 60"
+horizontal_alignment = 1
+
+[node name="AttackButton" type="Button" parent="."]
+offset_left = 459.0
+offset_top = 429.0
+offset_right = 522.0
+offset_bottom = 460.0
+text = "Attack"
+
+[node name="DefendButton" type="Button" parent="."]
+offset_left = 550.667
+offset_top = 428.667
+offset_right = 615.667
+offset_bottom = 459.667
+text = "Defend"
+
+[node name="RunButton" type="Button" parent="."]
+offset_left = 640.667
+offset_top = 430.0
+offset_right = 704.667
+offset_bottom = 461.0
+text = "Run"
+
+[node name="CombatLog" type="Label" parent="."]
+offset_left = 377.0
+offset_top = 161.0
+offset_right = 812.0
+offset_bottom = 184.0
+text = "Combat Begins"
+horizontal_alignment = 1
+
+[node name="PlayerCombat" parent="." instance=ExtResource("2_xl0gf")]
+position = Vector2(442.667, 331.333)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." instance=ExtResource("3_70l77")]
+position = Vector2(748.667, 330)
+scale = Vector2(4.5, 4.5)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=21 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://djw6e6mxivw52" path="res://Scenes/RedOrc.tscn" id="19_fevyy"]
+[ext_resource type="PackedScene" uid="uid://bq0ic8djpjude" path="res://Scenes/RedPeonOrc.tscn" id="20_hibaj"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(446, -75)
@@ -52,7 +54,13 @@ position = Vector2(545.225, -0.0103989)
 enemy_id = "slime_002"
 
 [node name="Enemy6" parent="." instance=ExtResource("9_b3802")]
-position = Vector2(1062, -27)
+position = Vector2(1861, -14)
+
+[node name="Enemy7" parent="." instance=ExtResource("19_fevyy")]
+position = Vector2(2092, -93)
+
+[node name="Enemy8" parent="." instance=ExtResource("20_hibaj")]
+position = Vector2(1095, -120)
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(572, -236)
@@ -98,5 +106,8 @@ position = Vector2(571.225, -188.01)
 polygon = PackedVector2Array(-1042.78, 246.99, -1040.78, 241.99, -1096.78, 239.99, -1096.78, 157.99, -998.775, 158.99, -992.775, 160.99, -993.775, 242.99, -1023.78, 242.99, -1023.78, 248.99, -990.775, 247.99, -990.402, 215.905, -989.775, 161.99, -994.775, 155.99, -1100.78, 154.99, -1104.78, 158.99, -1103.78, 245.99, -1099.78, 249.99, -1039.78, 250.99)
 
 [node name="Collision_Town" type="CollisionPolygon2D" parent="Collision"]
-position = Vector2(567, -187)
-polygon = PackedVector2Array(-1246.78, 365.99, 264, 374, 268, -210, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)
+position = Vector2(584, -187)
+polygon = PackedVector2Array(-1246.78, 365.99, 264, 375, 269, -209, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)
+
+[node name="Enemy10" parent="." instance=ExtResource("19_fevyy")]
+position = Vector2(-280, 45)
