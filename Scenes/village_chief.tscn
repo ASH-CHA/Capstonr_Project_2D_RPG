@@ -1,9 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://lwcqvmhq8qu8"]
 
-[ext_resource type="Texture2D" uid="uid://bm7rx20qp24dr" path="res://assets/npcs/Human-Soldier-Cyan.png" id="1_bap51"]
+[ext_resource type="Texture2D" uid="uid://cvnr3283tnpmu" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/village_soldier.png" id="1_bap51"]
 [ext_resource type="Script" uid="uid://wuoch0o4ehje" path="res://Scripts/village_chief.gd" id="1_gsw4h"]
-[ext_resource type="PackedScene" uid="uid://1raa8224xqlp" path="res://Dialogue/village_soldier_dialogue.tscn" id="3_gsw4h"]
-
+[ext_resource type="PackedScene" uid="uid://bd0qdawgr5clp" path="res://Dialogue/village_chief_dialogue.tscn" id="3_gsw4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_syw8l"]
 atlas = ExtResource("1_bap51")
