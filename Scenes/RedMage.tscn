@@ -1,0 +1,153 @@
+[gd_scene load_steps=20 format=3 uid="uid://c3cvwdkna1a4v"]
+
+[ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_pgkna"]
+[ext_resource type="Texture2D" uid="uid://un1xaoa20nw0" path="res://assets/npcs/Mage-Red.png" id="2_6ylde"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0civf"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(160, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fro77"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(192, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ylde"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24p2q"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyjt3"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(576, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0sbt"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(608, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lueep"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(640, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yugr"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(672, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v6hh"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(704, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v0hl"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(736, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnkmv"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(576, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4es5"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(608, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cjbm"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(640, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tr6p"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(672, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7kxt"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lgg7"]
+atlas = ExtResource("2_6ylde")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24p2q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0civf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fro77")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ylde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24p2q")
+}],
+"loop": true,
+"name": &"combat_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyjt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0sbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lueep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yugr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v6hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v0hl")
+}],
+"loop": true,
+"name": &"death",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnkmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4es5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cjbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tr6p")
+}],
+"loop": true,
+"name": &"hit_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7kxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lgg7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="Enemy" instance=ExtResource("1_pgkna")]
+enemy_id = "redmage_001"
+enemy_type = "RedMage"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_24p2q")
+animation = &"combat_idle"
+frame_progress = 0.35795

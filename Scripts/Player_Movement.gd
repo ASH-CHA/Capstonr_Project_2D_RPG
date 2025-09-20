@@ -65,6 +65,10 @@ func read_input():
 	if velocity != Vector2():
 		velocity = velocity.normalized() * speed
 
+# Needed to collect items
+func player():
+	pass
+
 # Collect items
 func collect(item):
 	inv.insert(item)

@@ -17,7 +17,7 @@ var defending = false  # track if player is defending
 @onready var player_run_animation = $PlayerCombat/AnimationPlayer
 
 func _ready():
-	enemy_animated_sprite.play("idle")
+	enemy_animated_sprite.play("combat_idle")
 	player_animated_sprite.play("Player_combat_idle")
 	
 	# Connect buttons

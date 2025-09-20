@@ -259,8 +259,7 @@ script = ExtResource("1_0j78k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0eie4")
-animation = &"Player_combat_idle"
-frame_progress = 0.912797
+animation = &"hit_left"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_dwcbo")

@@ -3,7 +3,8 @@ extends Node
 var enemy_stats = {
 	"Bat" : 35,
 	"Spider" : 50,
-	"Slime" : 100
+	"Slime" : 100,
+	"RedMage" : 70
 }
 
 var player_position : Vector2

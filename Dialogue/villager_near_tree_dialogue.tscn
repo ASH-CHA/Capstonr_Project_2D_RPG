@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cld222i8h7vvc"]
+
+[ext_resource type="Script" uid="uid://31xflojos3pf" path="res://Dialogue/villager_near_tree_dialogue.gd" id="1_c7wqw"]
+[ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_xyvxd"]
+
+[node name="villager_near_tree_dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c7wqw")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -55.0
+offset_right = 78.0
+offset_bottom = -18.0
+texture = ExtResource("1_xyvxd")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 190.0
+offset_bottom = 28.0
+scale = Vector2(0.4, 0.4)
+text = "Name:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.0
+offset_right = 251.0
+offset_bottom = 88.0
+scale = Vector2(0.3, 0.3)
+text = "Chatting"

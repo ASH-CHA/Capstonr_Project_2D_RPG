@@ -1,9 +1,29 @@
-[gd_scene load_steps=23 format=3 uid="uid://c6ci28fm44j7o"]
+[gd_scene load_steps=28 format=3 uid="uid://c6ci28fm44j7o"]
 
 [ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_p4yo7"]
 [ext_resource type="Texture2D" uid="uid://bium4iehv6j38" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkbat_Sprites/pinkbat_idle_left_anim_strip_5.png" id="2_4rja6"]
 [ext_resource type="Texture2D" uid="uid://bfmvubqcg3tbe" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkbat_Sprites/pinkbat_death_anim_left_strip_8.png" id="2_v8k3x"]
 [ext_resource type="Texture2D" uid="uid://c3xyof3hgxbl4" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkbat_Sprites/pinkbat_hit_left_anim_strip_4.png" id="3_v8k3x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oues"]
+atlas = ExtResource("2_4rja6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbe3h"]
+atlas = ExtResource("2_4rja6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwi40"]
+atlas = ExtResource("2_4rja6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n64q6"]
+atlas = ExtResource("2_4rja6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5daju"]
+atlas = ExtResource("2_4rja6")
+region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_laydv"]
 atlas = ExtResource("2_v8k3x")
@@ -82,6 +102,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5oues")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbe3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwi40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n64q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5daju")
+}],
+"loop": true,
+"name": &"combat_idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_laydv")
 }, {
 "duration": 1.0,
@@ -153,4 +193,4 @@ enemy_type = "Bat"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_laydv")
-frame_progress = 0.470139
+animation = &"combat_idle"

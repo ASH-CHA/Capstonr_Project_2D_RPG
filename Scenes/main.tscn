@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=19 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -11,58 +11,75 @@
 [ext_resource type="PackedScene" uid="uid://cw2emlx8wh56i" path="res://Scenes/Slime.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://b63qu45jga1o6" path="res://Scenes/Desert.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://5hglpv3x38qg" path="res://Scenes/Corruption.tscn" id="8_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
-[ext_resource type="PackedScene" uid="uid://jogmavtrv7fu" path="res://Scenes/npc.tscn" id="12_6iyac"]
+[ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
+[ext_resource type="PackedScene" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
+[ext_resource type="PackedScene" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(462.775, -69.9896)
+position = Vector2(446, -75)
 script = ExtResource("1_21xkr")
 
 [node name="Town" parent="." instance=ExtResource("1_bo1nx")]
-position = Vector2(-653.775, 118.99)
+position = Vector2(-71.775, -73.0104)
 script = ExtResource("3_fdnlq")
 
 [node name="Desert" parent="." instance=ExtResource("7_344ge")]
-position = Vector2(1373.22, 51.9896)
+position = Vector2(1944.22, -28.0104)
 
 [node name="Corruption" parent="." instance=ExtResource("8_ynf5e")]
-position = Vector2(3933.23, 5.9896)
+position = Vector2(4501, -47)
 
 [node name="Enemy" parent="." instance=ExtResource("5_kry3j")]
-position = Vector2(-461.775, 26.9896)
+position = Vector2(520.225, 30.9896)
 enemy_id = "bat_002"
 
-[node name="Enemy2" parent="." instance=ExtResource("5_kry3j")]
-position = Vector2(-420.775, 28.9896)
-enemy_id = "bat_003"
+[node name="Enemy2" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(712, -155)
 
 [node name="Enemy3" parent="." instance=ExtResource("3_8gbba")]
-position = Vector2(-372.775, 57.9896)
+position = Vector2(520.225, -34.0104)
 enemy_id = "spider_002"
 
-[node name="Enemy4" parent="." instance=ExtResource("3_8gbba")]
-position = Vector2(-371.775, 94.9896)
-enemy_id = "spider_003"
+[node name="Enemy4" parent="." instance=ExtResource("6_21xkr")]
+position = Vector2(820, -138)
 
 [node name="Enemy5" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(-410.775, 114.99)
+position = Vector2(545.225, -0.0103989)
 enemy_id = "slime_002"
 
-[node name="Enemy6" parent="." instance=ExtResource("6_21xkr")]
-position = Vector2(-449.775, 120.99)
-enemy_id = "slime_003"
+[node name="Enemy6" parent="." instance=ExtResource("9_b3802")]
+position = Vector2(1062, -27)
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-301.775, 158.99)
+position = Vector2(572, -236)
 
 [node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-545.775, 44.9896)
+position = Vector2(305.225, -51.0104)
 
 [node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(-1.77499, -24.0104)
+position = Vector2(9, -132)
+
+[node name="health_potion_collectable" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(823, -100)
+
+[node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
+position = Vector2(-49.775, 41.9896)
+
+[node name="village_chief" parent="." instance=ExtResource("11_k12tt")]
+position = Vector2(473, -3)
+
+[node name="villager_near_tree" parent="." instance=ExtResource("15_h1bgf")]
+position = Vector2(65, -128)
+
+[node name="village_soldier" parent="." instance=ExtResource("16_b3802")]
+position = Vector2(589, -164)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
-position = Vector2(-441.775, 85.9896)
+position = Vector2(-445.775, 72.9896)
 inv = ExtResource("4_344ge")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -74,13 +91,12 @@ offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
 
-[node name="npc" parent="." instance=ExtResource("12_6iyac")]
-position = Vector2(-475.775, -94.0104)
-
 [node name="Collision" type="StaticBody2D" parent="."]
 
 [node name="Collision_Heron_House" type="CollisionPolygon2D" parent="Collision"]
-polygon = PackedVector2Array(-1042.78, 246.99, -1040.78, 241.99, -1096.78, 239.99, -1096.78, 157.99, -998.775, 158.99, -992.775, 160.99, -993.775, 242.99, -1023.78, 242.99, -1023.78, 248.99, -990.775, 247.99, -989.775, 161.99, -994.775, 155.99, -1100.78, 154.99, -1104.78, 158.99, -1103.78, 245.99, -1099.78, 249.99, -1039.78, 250.99)
+position = Vector2(571.225, -188.01)
+polygon = PackedVector2Array(-1042.78, 246.99, -1040.78, 241.99, -1096.78, 239.99, -1096.78, 157.99, -998.775, 158.99, -992.775, 160.99, -993.775, 242.99, -1023.78, 242.99, -1023.78, 248.99, -990.775, 247.99, -990.402, 215.905, -989.775, 161.99, -994.775, 155.99, -1100.78, 154.99, -1104.78, 158.99, -1103.78, 245.99, -1099.78, 249.99, -1039.78, 250.99)
 
 [node name="Collision_Town" type="CollisionPolygon2D" parent="Collision"]
-polygon = PackedVector2Array(-1246.78, 365.99, 51.225, 370.99, 51.225, -191.01, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)
+position = Vector2(567, -187)
+polygon = PackedVector2Array(-1246.78, 365.99, 264, 374, 268, -210, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)

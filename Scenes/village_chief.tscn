@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://be83qjuhqihwe"]
+
+[ext_resource type="Script" uid="uid://daurb4u1hyxai" path="res://Scripts/village_chief.gd" id="1_gsw4h"]
+[ext_resource type="Texture2D" uid="uid://bv7ney2121pb3" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/village_soldier.png" id="2_gsw4h"]
+[ext_resource type="PackedScene" uid="uid://bd0qdawgr5clp" path="res://Dialogue/village_chief_dialogue.tscn" id="3_gsw4h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3w23"]
+atlas = ExtResource("2_gsw4h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwsoa"]
+atlas = ExtResource("2_gsw4h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q5y8"]
+atlas = ExtResource("2_gsw4h")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0jie"]
+atlas = ExtResource("2_gsw4h")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q5y8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3w23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwsoa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q5y8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0jie")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bap51"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_syw8l"]
+radius = 22.0227
+
+[node name="village_chief" type="CharacterBody2D"]
+script = ExtResource("1_gsw4h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8q5y8")
+animation = &"idle_right"
+frame_progress = 0.86301
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bap51")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_syw8l")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="village_chief_dialogue" parent="." instance=ExtResource("3_gsw4h")]
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="village_chief_dialogue" to="." method="_on_village_chief_dialogue_dialogue_finished"]

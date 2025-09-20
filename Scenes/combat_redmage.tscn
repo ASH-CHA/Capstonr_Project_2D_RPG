@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvt8g5ggfa06e"]
+
+[ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_il8at"]
+[ext_resource type="Texture2D" uid="uid://ce7sjmrdmoifv" path="res://assets/basic_battle_background.png" id="2_i1yip"]
+[ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="2_qgg31"]
+[ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="4_qgg31"]
+
+[node name="Combat" type="Node2D"]
+position = Vector2(-285, -143)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_il8at")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 184.0
+offset_top = 96.0
+offset_right = 958.0
+offset_bottom = 530.0
+texture = ExtResource("2_i1yip")
+expand_mode = 1
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 330.667
+offset_top = 236.0
+offset_right = 470.667
+offset_bottom = 259.0
+text = "Player Health: 100"
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 692.667
+offset_top = 237.333
+offset_right = 827.667
+offset_bottom = 260.333
+text = "Enemy Health: 70"
+
+[node name="AttackButton" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 422.667
+offset_right = 502.0
+offset_bottom = 453.667
+text = "Attack"
+
+[node name="DefendButton" type="Button" parent="."]
+offset_left = 531.333
+offset_top = 423.333
+offset_right = 596.333
+offset_bottom = 454.333
+text = "Defend"
+
+[node name="RunButton" type="Button" parent="."]
+offset_left = 620.667
+offset_top = 422.0
+offset_right = 684.667
+offset_bottom = 453.0
+text = "Run"
+
+[node name="CombatLog" type="Label" parent="."]
+offset_left = 287.0
+offset_top = 173.0
+offset_right = 843.0
+offset_bottom = 196.0
+text = "Combat Begins"
+horizontal_alignment = 1
+
+[node name="PlayerCombat" parent="." instance=ExtResource("2_qgg31")]
+position = Vector2(395.333, 335.333)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." instance=ExtResource("4_qgg31")]
+position = Vector2(764.667, 334.667)
+scale = Vector2(4.5, 4.5)

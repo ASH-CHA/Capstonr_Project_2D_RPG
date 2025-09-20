@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cw2emlx8wh56i"]
+[gd_scene load_steps=37 format=3 uid="uid://cw2emlx8wh56i"]
 
 [ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_p1xxi"]
 [ext_resource type="Texture2D" uid="uid://d0ulv6yc2ydta" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Pinkslime_Sprites/pinkslime_idle_anim_all_dir_strip_6.png" id="2_7yyg5"]
@@ -28,6 +28,30 @@ region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sadrg"]
 atlas = ExtResource("2_oi5nh")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gdrv"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf5fp"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oswlh"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h27s6"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ligs8"]
+atlas = ExtResource("2_7yyg5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4rxo"]
+atlas = ExtResource("2_7yyg5")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tu4ju"]
@@ -129,6 +153,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8gdrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf5fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oswlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h27s6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ligs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4rxo")
+}],
+"loop": true,
+"name": &"combat_idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tu4ju")
 }, {
 "duration": 1.0,
@@ -203,5 +250,4 @@ enemy_type = "Slime"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_tu4ju")
-animation = &"attack_left"
-frame_progress = 0.0299055
+animation = &"combat_idle"

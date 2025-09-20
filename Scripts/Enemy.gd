@@ -28,5 +28,7 @@ func _on_body_entered(body):
 			get_tree().change_scene_to_file("res://Scenes/combat_bat.tscn")
 		elif enemy_type == "Slime":
 			get_tree().change_scene_to_file("res://Scenes/combat_slime.tscn")
-		else:
+		elif enemy_type == "Spider":
 			get_tree().change_scene_to_file("res://Scenes/combat_spider.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/combat_redmage.tscn")

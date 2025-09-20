@@ -1,9 +1,42 @@
-[gd_scene load_steps=22 format=3 uid="uid://o25ms4401l4s"]
+[gd_scene load_steps=31 format=3 uid="uid://o25ms4401l4s"]
 
 [ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_7jur5"]
 [ext_resource type="Texture2D" uid="uid://d0cd1dsvar4ew" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Spider_Sprites/spider_death_anim_all_dir_strip_8.png" id="2_hrc5k"]
+[ext_resource type="Texture2D" uid="uid://c0f1el2giiury" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Spider_Sprites/spider_run_anim_all_dir_strip_4.png" id="2_js0a4"]
 [ext_resource type="Texture2D" uid="uid://cxuunc8fahwi8" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Spider_Sprites/spider_idle_anim_all_dir_strip_4.png" id="2_oc654"]
 [ext_resource type="Texture2D" uid="uid://byni648auqox" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Spider_Sprites/spider_hit_anim_all_dir_strip_4.png" id="3_hrc5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcvv0"]
+atlas = ExtResource("2_js0a4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oed32"]
+atlas = ExtResource("2_js0a4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udycm"]
+atlas = ExtResource("2_js0a4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdqwd"]
+atlas = ExtResource("2_js0a4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww17l"]
+atlas = ExtResource("2_oc654")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anhe7"]
+atlas = ExtResource("2_oc654")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bb34"]
+atlas = ExtResource("2_oc654")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6tv5"]
+atlas = ExtResource("2_oc654")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oc654"]
 atlas = ExtResource("2_hrc5k")
@@ -71,9 +104,38 @@ region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_psvc4"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcvv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oed32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udycm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdqwd")
+}],
 "loop": true,
 "name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww17l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anhe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bb34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6tv5")
+}],
+"loop": true,
+"name": &"combat_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -146,4 +208,4 @@ enemy_type = "Spider"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_psvc4")
-animation = &"attack_left"
+animation = &"combat_idle"

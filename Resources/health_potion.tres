@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cf2dkoc557cev"]
+
+[ext_resource type="Script" uid="uid://dapltlycan4m6" path="res://Scripts/inventory_item.gd" id="1_sqday"]
+[ext_resource type="Texture2D" uid="uid://61pqvt1f0dpy" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Props_Items_(animated)/health_potion_item.png" id="2_p5to1"]
+
+[resource]
+script = ExtResource("1_sqday")
+name = "health_potion"
+texture = ExtResource("2_p5to1")
+metadata/_custom_type_script = "uid://dapltlycan4m6"
