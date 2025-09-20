@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://cy5jaeum0fkgy"]
+[gd_scene load_steps=94 format=3 uid="uid://cy5jaeum0fkgy"]
 
 [ext_resource type="Script" uid="uid://d114235r27ucu" path="res://Scripts/Player_Movement.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://ckai0mpomxy81" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_down_anim_strip_6.png" id="1_rpqav"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dub2y7u7h1plt" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_right_anim_strip_6.png" id="5_bhhdu"]
 [ext_resource type="Texture2D" uid="uid://kkhu35vxta1k" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_up_anim_strip_6.png" id="5_ksbbd"]
 [ext_resource type="Texture2D" uid="uid://cw0iuhivith6o" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_up_anim_strip_6.png" id="6_megsn"]
-[ext_resource type="PackedScene" uid="uid://bp7kq2qe288ho" path="res://Scenes/textbox.tscn" id="14_o3h8g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fayk8"]
 atlas = ExtResource("2_miouo")
@@ -642,5 +641,3 @@ animation = &"idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_miouo")
 debug_color = Color(0, 0.6, 0.701961, 0.529412)
-
-[node name="Textbox" parent="." instance=ExtResource("14_o3h8g")]
