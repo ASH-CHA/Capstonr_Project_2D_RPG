@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dub2y7u7h1plt" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_right_anim_strip_6.png" id="5_bhhdu"]
 [ext_resource type="Texture2D" uid="uid://kkhu35vxta1k" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_up_anim_strip_6.png" id="5_ksbbd"]
 [ext_resource type="Texture2D" uid="uid://cw0iuhivith6o" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_up_anim_strip_6.png" id="6_megsn"]
-[ext_resource type="PackedScene" path="res://Scenes/textbox.tscn" id="14_o3h8g"]
+[ext_resource type="PackedScene" uid="uid://5r2l030jsogl" path="res://Scenes/textbox.tscn" id="14_o3h8g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fayk8"]
 atlas = ExtResource("2_miouo")
@@ -642,5 +642,14 @@ animation = &"attack_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_miouo")
 debug_color = Color(0, 0.6, 0.701961, 0.529412)
+
+[node name="HPLabel" type="Label" parent="."]
+offset_left = -17.0
+offset_top = 5.0
+offset_right = 94.0
+offset_bottom = 28.0
+scale = Vector2(0.3, 0.3)
+text = "Player HP: 100"
+horizontal_alignment = 1
 
 [node name="Textbox" parent="." instance=ExtResource("14_o3h8g")]

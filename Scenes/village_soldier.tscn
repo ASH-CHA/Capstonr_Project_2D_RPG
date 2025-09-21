@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://crm5js7n1qbn3"]
+[gd_scene load_steps=11 format=3 uid="uid://dfbe6p0elfyu1"]
 
-[ext_resource type="Script" uid="uid://caxx1as3uscy" path="res://Scripts/village_soldier.gd" id="1_ovp2g"]
+[ext_resource type="Script" uid="uid://s5mk4lyvfexr" path="res://Scripts/village_soldier.gd" id="1_ovp2g"]
 [ext_resource type="Texture2D" uid="uid://dng17mojiyc65" path="res://assets/npcs/Human-Soldier-Cyan.png" id="1_wx18k"]
 [ext_resource type="PackedScene" uid="uid://bdeepfj88uxrg" path="res://Dialogue/village_soldier_dialogue.tscn" id="3_dihm8"]
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dps1k0h217psl"]
+[gd_scene load_steps=11 format=3 uid="uid://burms54kmmwul"]
 
 [ext_resource type="Texture2D" uid="uid://n3jsbvmmkaeb" path="res://assets/npcs/Human-Worker-Cyan.png" id="1_h78ua"]
-[ext_resource type="Script" uid="uid://bcjc6loq1qk81" path="res://Scripts/villager_near_tree.gd" id="1_kwrg8"]
+[ext_resource type="Script" uid="uid://vsqjfb4w7ycy" path="res://Scripts/villager_near_tree.gd" id="1_kwrg8"]
 [ext_resource type="PackedScene" uid="uid://cld222i8h7vvc" path="res://Dialogue/villager_near_tree_dialogue.tscn" id="3_nf1og"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwrg8"]
@@ -57,6 +57,7 @@ script = ExtResource("1_kwrg8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tg4wt")
 animation = &"idle"
+frame_progress = 0.675035
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ksa7a")

@@ -7,12 +7,19 @@ var combat_triggered = false
 @export var inv: Inv # add inventory
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var hp_label: Label = $HPLabel
 #@onready var enemy = get_parent().get_node("Spider")
 
 func _ready():
 	animated_sprite_2d.play("idle_down")
 	var player = get_tree().get_root().get_node("Main/Player")
 	player.global_position = GameManager.player_position
+	
+	hp_label.text = str(GameManager.player_hp) + " / " + str(GameManager.player_max_hp)
+	update_hp_label()
+	
+	# Connects signal so HP label updates immediately when items are used
+	inv.hp_changed.connect(update_hp_label)
 
 func _physics_process(_delta):
 	read_input()
@@ -72,3 +79,7 @@ func player():
 # Collect items
 func collect(item):
 	inv.insert(item)
+
+# Update Player HP Label
+func update_hp_label():
+	hp_label.text = str(GameManager.player_hp) + " / " + str(GameManager.player_max_hp)

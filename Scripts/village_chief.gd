@@ -11,8 +11,8 @@ func _ready():
 func _process(_delta):
 	$AnimatedSprite2D.play("idle_right")
 	
-	# Press the 'c' key to activate
-	if Input.is_action_just_pressed("chat"):
+	# Press the 'c' key to activate when near chat zone
+	if player_in_chat_zone and Input.is_action_just_pressed("chat"):
 		print("chatting with npc")
 		$village_chief_dialogue.start()
 		is_chatting = true

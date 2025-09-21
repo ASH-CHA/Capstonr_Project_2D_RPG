@@ -9,7 +9,11 @@ var current_text_id = 0
 var t_active = false
 
 func _ready():
-	start()
+	if not GameManager.intro_shown:
+		start()
+		GameManager.intro_shown = true  # mark it as shown
+	else:
+		queue_free()  # remove textbox so it never appears again
 
 func start():
 	if t_active:

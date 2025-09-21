@@ -1,6 +1,5 @@
 extends Node2D
 
-var player_hp = 100
 var enemy_hp = null
 var player_turn = true
 var defending = false  # track if player is defending
@@ -94,9 +93,10 @@ func _enemy_attack():
 	else:
 		combat_log.text = "Enemy deals " + str(damage) + " damage!"
 	
-	player_hp -= damage
+	# Update global HP
+	GameManager.player_hp -= damage
 	
-	if player_hp <= 0:
+	if GameManager.player_hp <= 0:
 		combat_log.text = "Defeat! You have fallen!"
 		attack_button.disabled = true
 		defend_button.disabled = true
@@ -118,5 +118,5 @@ func _game_over():
 
 # UI UPDATE
 func update_ui():
-	player_health_label.text = "Player HP: " + str(player_hp)
+	player_health_label.text = "Player HP: " + str(GameManager.player_hp) + " / " + str(GameManager.player_max_hp)
 	enemy_health_label.text = "Enemy HP: " + str(enemy_hp)

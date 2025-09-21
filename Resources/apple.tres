@@ -7,4 +7,5 @@
 script = ExtResource("1_sd1tx")
 name = "apple"
 texture = ExtResource("2_ir4je")
+hp_restore = 5
 metadata/_custom_type_script = "uid://dapltlycan4m6"
