@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://licg455o18sg"]
+[gd_scene load_steps=5 format=3 uid="uid://dptu7ct43km1u"]
 
 [ext_resource type="Texture2D" uid="uid://61pqvt1f0dpy" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Props_Items_(animated)/health_potion_item.png" id="1_i6sfr"]
-[ext_resource type="Script" uid="uid://b81re12uvk2b" path="res://Scripts/health_potion_collectable.gd" id="1_tvo5b"]
-[ext_resource type="Resource" uid="uid://cf2dkoc557cev" path="res://Resources/health_potion.tres" id="2_jefy0"]
+[ext_resource type="Script" uid="uid://cqxiud16ljmvb" path="res://Scripts/health_potion_collectable.gd" id="1_tvo5b"]
+[ext_resource type="Resource" uid="uid://b72qaf6cxpbpt" path="res://Resources/health_potion.tres" id="2_jefy0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tvo5b"]
 
@@ -19,9 +19,9 @@ texture = ExtResource("1_i6sfr")
 shape = SubResource("CircleShape2D_tvo5b")
 
 [node name="CollectedNote" type="Label" parent="."]
-offset_left = -12.0
+offset_left = -17.0
 offset_top = -11.0
-offset_right = 117.0
+offset_right = 112.0
 offset_bottom = 12.0
 scale = Vector2(0.2, 0.2)
 

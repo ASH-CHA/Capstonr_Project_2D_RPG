@@ -9,7 +9,7 @@ func _on_interactable_area_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player = body
 		playercollect()
-		collected_note.text = "+1 Health Potion Collected"
+		collected_note.text = "+1 Herb Collected"
 		await get_tree().create_timer(0.5).timeout
 		collected_note.text = ""
 		await get_tree().create_timer(0.1).timeout

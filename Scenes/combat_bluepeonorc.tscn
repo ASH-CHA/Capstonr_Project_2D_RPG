@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://w1xayxa1d04h"]
+
+[ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_cgr5o"]
+[ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="2_afsxa"]
+[ext_resource type="Texture2D" uid="uid://ce7sjmrdmoifv" path="res://assets/basic_battle_background.png" id="2_ni5hx"]
+[ext_resource type="PackedScene" uid="uid://dtpdfpsyis0hj" path="res://Scenes/BluePeonOrc.tscn" id="3_ni5hx"]
+
+[node name="Combat" type="Node2D"]
+position = Vector2(-268, -142)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_cgr5o")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 171.0
+offset_top = 91.0
+offset_right = 956.0
+offset_bottom = 535.0
+texture = ExtResource("2_ni5hx")
+expand_mode = 1
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 358.0
+offset_top = 226.0
+offset_right = 471.0
+offset_bottom = 249.0
+text = "Player Health: "
+horizontal_alignment = 1
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 667.0
+offset_top = 227.0
+offset_right = 780.0
+offset_bottom = 250.0
+text = "Enemy Health:"
+horizontal_alignment = 1
+
+[node name="AttackButton" type="Button" parent="."]
+offset_left = 442.0
+offset_top = 437.0
+offset_right = 506.0
+offset_bottom = 468.0
+text = "Attack"
+
+[node name="DefendButton" type="Button" parent="."]
+offset_left = 532.0
+offset_top = 437.0
+offset_right = 597.0
+offset_bottom = 468.0
+text = "Defend
+"
+
+[node name="RunButton" type="Button" parent="."]
+offset_left = 623.0
+offset_top = 436.0
+offset_right = 688.0
+offset_bottom = 467.0
+text = "Run"
+
+[node name="CombatLog" type="Label" parent="."]
+offset_left = 361.0
+offset_top = 155.0
+offset_right = 779.0
+offset_bottom = 178.0
+text = "Combat Begins"
+horizontal_alignment = 1
+
+[node name="PlayerCombat" parent="." instance=ExtResource("2_afsxa")]
+position = Vector2(410, 338)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." instance=ExtResource("3_ni5hx")]
+position = Vector2(729, 329)
+scale = Vector2(4.5, 4.5)

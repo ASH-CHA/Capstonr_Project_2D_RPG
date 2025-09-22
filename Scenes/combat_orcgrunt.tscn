@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://boysj22lmq0k7"]
+
+[ext_resource type="Script" uid="uid://cxdw2i7xb5kvr" path="res://Scripts/combat.gd" id="1_f2ne8"]
+[ext_resource type="Texture2D" uid="uid://ce7sjmrdmoifv" path="res://assets/basic_battle_background.png" id="2_d2oyb"]
+[ext_resource type="PackedScene" uid="uid://x5njiwmdt4me" path="res://Scenes/Player_combat.tscn" id="2_pd3oy"]
+[ext_resource type="PackedScene" uid="uid://u7txo1k4cxth" path="res://Scenes/OrcGrunt.tscn" id="3_d2oyb"]
+
+[node name="Combat" type="Node2D"]
+position = Vector2(-275, -89)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_f2ne8")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 180.0
+offset_top = 56.0
+offset_right = 953.0
+offset_bottom = 495.0
+texture = ExtResource("2_d2oyb")
+expand_mode = 1
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 310.0
+offset_top = 185.0
+offset_right = 423.0
+offset_bottom = 208.0
+text = "Player Health: "
+horizontal_alignment = 1
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 711.0
+offset_top = 184.0
+offset_right = 828.0
+offset_bottom = 207.0
+text = "Enemy Health: "
+horizontal_alignment = 1
+
+[node name="AttackButton" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 392.0
+offset_right = 521.0
+offset_bottom = 423.0
+text = "Attack"
+
+[node name="DefendButton" type="Button" parent="."]
+offset_left = 544.0
+offset_top = 392.0
+offset_right = 609.0
+offset_bottom = 423.0
+text = "Defend"
+
+[node name="RunButton" type="Button" parent="."]
+offset_left = 627.0
+offset_top = 392.0
+offset_right = 692.0
+offset_bottom = 423.0
+text = "Run"
+
+[node name="CombatLog" type="Label" parent="."]
+offset_left = 319.0
+offset_top = 128.0
+offset_right = 820.0
+offset_bottom = 151.0
+text = "Combat Begins"
+horizontal_alignment = 1
+
+[node name="PlayerCombat" parent="." instance=ExtResource("2_pd3oy")]
+position = Vector2(361, 301)
+scale = Vector2(5, 5)
+
+[node name="Enemy" parent="." instance=ExtResource("3_d2oyb")]
+position = Vector2(768, 290)
+scale = Vector2(5, 5)

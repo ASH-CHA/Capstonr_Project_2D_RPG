@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=25 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -17,9 +17,13 @@
 [ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
-[ext_resource type="PackedScene" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://djw6e6mxivw52" path="res://Scenes/RedOrc.tscn" id="19_fevyy"]
 [ext_resource type="PackedScene" uid="uid://bq0ic8djpjude" path="res://Scenes/RedPeonOrc.tscn" id="20_hibaj"]
+[ext_resource type="PackedScene" uid="uid://5dmto2bh5vmd" path="res://Scenes/BlueMage.tscn" id="21_pdsj5"]
+[ext_resource type="PackedScene" uid="uid://u7txo1k4cxth" path="res://Scenes/OrcGrunt.tscn" id="22_ee4r6"]
+[ext_resource type="PackedScene" uid="uid://das045tklyqau" path="res://Scenes/herb_collectable.tscn" id="23_gt3je"]
+[ext_resource type="PackedScene" uid="uid://dtpdfpsyis0hj" path="res://Scenes/BluePeonOrc.tscn" id="24_3pmx8"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(446, -75)
@@ -62,6 +66,15 @@ position = Vector2(2092, -93)
 [node name="Enemy8" parent="." instance=ExtResource("20_hibaj")]
 position = Vector2(1095, -120)
 
+[node name="Enemy9" parent="." instance=ExtResource("21_pdsj5")]
+position = Vector2(3392, -34)
+
+[node name="Enemy10" parent="." instance=ExtResource("22_ee4r6")]
+position = Vector2(3389, -106)
+
+[node name="Enemy11" parent="." instance=ExtResource("24_3pmx8")]
+position = Vector2(3427, -70)
+
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(572, -236)
 
@@ -73,6 +86,9 @@ position = Vector2(9, -132)
 
 [node name="health_potion_collectable" parent="." instance=ExtResource("17_h1bgf")]
 position = Vector2(823, -100)
+
+[node name="herb_collectable" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3350, -65)
 
 [node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
 position = Vector2(-49.775, 41.9896)

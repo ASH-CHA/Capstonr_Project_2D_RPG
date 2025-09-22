@@ -6,7 +6,10 @@ var enemy_stats = {
 	"Slime" : 100,
 	"RedMage" : 70,
 	"RedOrc" : 80,
-	"RedPeonOrc" : 60
+	"RedPeonOrc" : 60,
+	"BlueMage" : 90,
+	"BluePeonOrc" : 100,
+	"OrcGrunt" : 120
 }
 
 var player_position : Vector2
@@ -22,6 +25,9 @@ var intro_shown = false
 # Updating player hp
 var player_max_hp: int = 100
 var player_hp: int = 100
+
+# Track Enemy HP
+var enemy_current_hp = {} # Stores current HP for each enemy_id
 
 func get_next_enemy_id() -> String:
 	next_unique_enemy_id += 1

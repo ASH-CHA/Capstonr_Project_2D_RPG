@@ -1,0 +1,153 @@
+[gd_scene load_steps=20 format=3 uid="uid://5dmto2bh5vmd"]
+
+[ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_wrrr4"]
+[ext_resource type="Texture2D" uid="uid://b0yugluxbmmoa" path="res://assets/npcs/Mage-Cyan.png" id="2_3qwc0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qwc0"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(160, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3thg"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(192, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gsn5"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tikxp"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hkvf"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(576, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m7ci"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(608, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lvdh"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(640, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8se4"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(672, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weqs3"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(704, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4ljo"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(736, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edpln"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(576, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jmr1"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(608, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ccd"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(640, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f55h5"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(672, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e1oe"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4iu4"]
+atlas = ExtResource("2_3qwc0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3thg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qwc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3thg")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gsn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tikxp")
+}],
+"loop": true,
+"name": &"combat_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hkvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m7ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lvdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8se4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weqs3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4ljo")
+}],
+"loop": true,
+"name": &"death",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edpln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jmr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ccd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f55h5")
+}],
+"loop": true,
+"name": &"hit_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2e1oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4iu4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="Enemy" instance=ExtResource("1_wrrr4")]
+enemy_id = "bluemage_001"
+enemy_type = "BlueMage"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_a3thg")
+animation = &"hit_right"
+frame_progress = 0.417001

@@ -1,6 +1,6 @@
 extends Node2D
 
-var enemy_hp = null
+var enemy_hp = GameManager.enemy_stats[GameManager.last_enemy_type]
 var player_turn = true
 var defending = false  # track if player is defending
 
@@ -24,7 +24,10 @@ func _ready():
 	defend_button.pressed.connect(_on_defend_pressed)
 	run_button.pressed.connect(_on_run_pressed)
 	
-	enemy_hp = GameManager.enemy_stats[GameManager.last_enemy_type]
+	# Load saved HP
+	enemy_hp = GameManager.enemy_current_hp[GameManager.last_enemy_id]
+	
+	#enemy_hp = GameManager.enemy_stats[GameManager.last_enemy_type]
 	update_ui()
 
 # ATTACK
@@ -34,6 +37,7 @@ func _on_attack_pressed():
 		enemy_animated_sprite.play("hit_right")
 		var damage = randi_range(15, 25)
 		enemy_hp -= damage
+		GameManager.enemy_current_hp[GameManager.last_enemy_id] = enemy_hp # save
 		combat_log.text = "You deal " + str(damage) + " damage!"
 		
 		if enemy_hp <= 0:
@@ -46,6 +50,8 @@ func _on_attack_pressed():
 			# Mark enemy defeated
 			GameManager.defeated_enemies[GameManager.last_enemy_id] = true
 			print(GameManager.defeated_enemies)
+			
+			GameManager.enemy_current_hp.erase(GameManager.last_enemy_id) # cleanup
 			
 			# Return to world after short delay
 			get_tree().create_timer(1.5).timeout.connect(_return_to_world)

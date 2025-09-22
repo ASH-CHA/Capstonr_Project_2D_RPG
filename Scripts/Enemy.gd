@@ -23,6 +23,11 @@ func _on_body_entered(body):
 		GameManager.enemy_position = body.global_position
 		GameManager.last_enemy_id = enemy_id
 		GameManager.last_enemy_type = enemy_type
+		
+		# Initialize HP if not already tracked
+		if !GameManager.enemy_current_hp.has(enemy_id):
+			GameManager.enemy_current_hp[enemy_id] = GameManager.enemy_stats[enemy_type]
+		
 		print("Starting combat!")
 		if enemy_type == "Bat":
 			get_tree().change_scene_to_file("res://Scenes/combat_bat.tscn")
@@ -34,5 +39,11 @@ func _on_body_entered(body):
 			get_tree().change_scene_to_file("res://Scenes/combat_redmage.tscn")
 		elif enemy_type == "RedOrc":
 			get_tree().change_scene_to_file("res://Scenes/combat_redorc.tscn")
-		else:
+		elif enemy_type == "RedPeonOrc":
 			get_tree().change_scene_to_file("res://Scenes/combat_redpeonorc.tscn")
+		elif enemy_type == "BlueMage":
+			get_tree().change_scene_to_file("res://Scenes/combat_bluemage.tscn")
+		elif enemy_type == "BluePeonOrc":
+			get_tree().change_scene_to_file("res://Scenes/combat_bluepeonorc.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/combat_orcgrunt.tscn")

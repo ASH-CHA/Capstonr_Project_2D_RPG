@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dpxfba1bsnj4p"]
+
+[ext_resource type="Script" uid="uid://dapltlycan4m6" path="res://Scripts/inventory_item.gd" id="1_gctvn"]
+[ext_resource type="Texture2D" uid="uid://dk61n0pkshuy5" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Props_Items_(animated)/plant_prop_anim_cut.png" id="2_di2c3"]
+
+[resource]
+script = ExtResource("1_gctvn")
+name = "herb"
+texture = ExtResource("2_di2c3")
+hp_restore = 15
+metadata/_custom_type_script = "uid://dapltlycan4m6"

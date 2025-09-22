@@ -149,4 +149,4 @@ enemy_type = "RedMage"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_24p2q")
-animation = &"hit_right"
+animation = &"death"
