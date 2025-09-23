@@ -208,4 +208,5 @@ enemy_type = "Spider"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_psvc4")
-animation = &"combat_idle"
+animation = &"hit_right"
+frame_progress = 0.833751

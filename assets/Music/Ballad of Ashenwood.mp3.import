@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dv2jelo7tvcwi"
+path="res://.godot/imported/Ballad of Ashenwood.mp3-5c4ffc0c18bd91711f05c481ce662717.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Ballad of Ashenwood.mp3"
+dest_files=["res://.godot/imported/Ballad of Ashenwood.mp3-5c4ffc0c18bd91711f05c481ce662717.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -53,20 +53,20 @@ func read_input():
 		# Idle animations based on last direction faced
 		if direction == Vector2(0, -1):
 			animated_sprite_2d.play("idle_up")
-			if Input.is_action_pressed("attack"):
-				animated_sprite_2d.play("attack_up")
+			#if Input.is_action_pressed("attack"):
+				#animated_sprite_2d.play("attack_up")
 		elif direction == Vector2(0, 1):
 			animated_sprite_2d.play("idle_down")
-			if Input.is_action_pressed("attack"):
-				animated_sprite_2d.play("attack_down")
+			#if Input.is_action_pressed("attack"):
+				#animated_sprite_2d.play("attack_down")
 		elif direction == Vector2(-1, 0):
 			animated_sprite_2d.play("idle_left")
-			if Input.is_action_pressed("attack"):
-				animated_sprite_2d.play("attack_left")
+			#if Input.is_action_pressed("attack"):
+				#animated_sprite_2d.play("attack_left")
 		elif direction == Vector2(1, 0):
 			animated_sprite_2d.play("idle_right")
-			if Input.is_action_pressed("attack"):
-				animated_sprite_2d.play("attack_right")
+			#if Input.is_action_pressed("attack"):
+				#animated_sprite_2d.play("attack_right")
 
 	# Normalize velocity to avoid faster diagonal movement
 	if velocity != Vector2():

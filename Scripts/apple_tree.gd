@@ -8,11 +8,27 @@ var player_in_area = false
 var apple = preload("res://Scenes/apple_collectable.tscn")
 
 @export var item: InvItem
+@export var tree_id: String = "" # unique per tree
+var regrow_duration = 60.0 # 1 minute in seconds
 var player = null
 
 func _ready() -> void:
-	if state == "no apples":
-		$growth_timer.start()
+	# Auto-assign ID if none provided
+	if tree_id == "" or tree_id == "tree_000":
+		tree_id = str(get_path()) # path-based unique ID
+		
+	# Check GameManager if this tree is regrowing
+	if GameManager.apple_trees.has(tree_id):
+		var remaining = GameManager.apple_trees[tree_id] - Time.get_unix_time_from_system()
+		
+		if remaining > 0:
+			state = "no apples"
+			$growth_timer.start(remaining)
+		else:
+			state = "apples"
+	else:
+		# Default state is apples
+		state = "apples"
 
 func _process(_delta):
 	if state == "no apples":
@@ -34,19 +50,25 @@ func _on_pickable_area_body_exited(body: Node2D) -> void:
 		player_in_area = false
 
 func _on_growth_timer_timeout() -> void:
-	if state == "no apples":
-		state = "apples"
+	state = "apples"
+	if GameManager.apple_trees.has(tree_id):
+		GameManager.apple_trees.erase(tree_id)  # apples grown, clear entry
 
 func drop_apple():
 	var apple_instance = apple.instantiate()
 	apple_instance.global_position = $Marker2D.global_position
 	get_parent().add_child(apple_instance)
 	player.collect(item)
+	
 	collected_note.text = "+1 Apple Collected"
 	await get_tree().create_timer(1.5).timeout
 	collected_note.text = ""
+	
+	# Store global respawn timestamp
+	GameManager.apple_trees[tree_id] = Time.get_unix_time_from_system() + regrow_duration
 	await get_tree().create_timer(3).timeout
-	$growth_timer.start()
+	state = "no apples"
+	$growth_timer.start(regrow_duration)
 	
 	
 func collection_label():

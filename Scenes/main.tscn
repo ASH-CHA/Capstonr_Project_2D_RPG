@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
@@ -79,13 +79,28 @@ position = Vector2(3427, -70)
 position = Vector2(572, -236)
 
 [node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(305.225, -51.0104)
+position = Vector2(304, -61)
 
 [node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(9, -132)
 
+[node name="apple_tree4" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-349, -314)
+
+[node name="apple_tree5" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-109, -205)
+
+[node name="apple_tree6" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(429, 101)
+
+[node name="apple_tree7" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-16, 133)
+
+[node name="apple_tree8" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(-598, -133)
+
 [node name="health_potion_collectable" parent="." instance=ExtResource("17_h1bgf")]
-position = Vector2(823, -100)
+position = Vector2(820, -99)
 
 [node name="herb_collectable" parent="." instance=ExtResource("23_gt3je")]
 position = Vector2(3350, -65)
@@ -97,7 +112,7 @@ position = Vector2(-49.775, 41.9896)
 position = Vector2(473, -3)
 
 [node name="villager_near_tree" parent="." instance=ExtResource("15_h1bgf")]
-position = Vector2(65, -128)
+position = Vector2(308, -3)
 
 [node name="village_soldier" parent="." instance=ExtResource("16_b3802")]
 position = Vector2(589, -164)

@@ -29,6 +29,20 @@ var player_hp: int = 100
 # Track Enemy HP
 var enemy_current_hp = {} # Stores current HP for each enemy_id
 
+var collected_items = {} # item_id -> true if collected
+var next_unique_item_id = 0
+
+var apple_trees = {} # tree_id -> respawn_time
+var next_unique_tree_id = 0
+
 func get_next_enemy_id() -> String:
 	next_unique_enemy_id += 1
 	return str(next_unique_enemy_id)
+
+func get_next_item_id() -> String:
+	next_unique_item_id += 1
+	return str(next_unique_item_id)
+
+func get_next_tree_id() -> String:
+	next_unique_tree_id += 1
+	return str(next_unique_tree_id)

@@ -2,5 +2,5 @@
 	{"name": "Villager", "text": "Collecting food and potions heals yourself."},
 	{"name": "Villager", "text": "Go near this apple tree and press the E key to collect an apple."},
 	{"name": "Villager", "text": "You can press the I key to see the apple in your inventory."},
-	{"name": "Villager", "text": "It will take 3 minutes to collect another apple from the same tree."}
+	{"name": "Villager", "text": "It will take 1 minute to collect another apple from the same tree."}
 ]
