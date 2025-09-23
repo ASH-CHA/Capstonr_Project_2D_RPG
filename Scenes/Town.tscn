@@ -1269,5 +1269,5 @@ tile_set = SubResource("TileSet_6l8jp")
 [node name="Winding-downLooping" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("5_x76ya")
-volume_db = 1.874
+volume_db = -12.18
 autoplay = true
