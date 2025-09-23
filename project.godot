@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="A Light in the Darkness"
-run/main_scene="uid://bem7x70qeeem6"
+run/main_scene="uid://dx2idsw3l7mxr"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
