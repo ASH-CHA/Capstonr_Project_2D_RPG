@@ -1,6 +1,13 @@
 [
 	{"name": "Village Chief", "text": "Ah, Heron, you’ve finally awakened."},
-	{"name": "Village Chief", "text": "Your journey begins here."},
-	{"name": "Village Chief", "text": "You must learn to fight and defend yourself against Malakron’s forces."},
-	{"name": "Village Chief", "text": "If your situation is dire, you may run."}
+	{"name": "Village Chief", "text": "Heron, while you slept, Mora suffered."},
+	{"name": "Village Chief", "text": "Lord Malakron’s corruption spreads across the land, twisting our enemies and bringing ruin."},
+	{"name": "Village Chief", "text": "You must grow stronger to face what lies ahead."},
+	{"name": "Village Chief", "text": "To survive, you’ll need to master combat. Here—let me show you how to fight."},
+	{"name": "Village Chief", "text": "Battles are turn-based: strike wisely, defend when needed, and use your skills well."},
+	{"name": "Village Chief", "text": "Victory depends on strategy, not just strength."},
+	{"name": "Village Chief", "text": "If your situation is dire, you may run and heal yourself with food and potions from your inventory."},
+	{"name": "Village Chief", "text": "Now, approach each enemy and defeat them."},
+	{"name": "Village Chief", "text": "Once all defeated, head NORTH to speak with a soldier keeping watch of the town."},
+	{"name": "Village Chief", "text": "He will head you out and you will begin your journey."}
 ]

@@ -1,8 +1,12 @@
 [
-	{"name": "Villager", "text": "Hello there!"},
-	{"name": "Villager", "text": "You must be Heron the hero!"},
-	{"name": "Villager", "text": "You're finally awake!"},
+	{"name": "Monologue", "text": "The villager looks relieved to see you."},
+	{"name": "Villager", "text": "Heron! You’re awake at last."},
+	{"name": "Villager", "text": "The Chief has been waiting for you."},
 	{"name": "Villager", "text": "There is still hope after all!"},
-	{"name": "Villager", "text": "You must find and speak to the chief of this village."},
-	{"name": "Villager", "text": "He should be EAST of this village fending off the monsters."}
+	{"name": "Villager", "text": "He says Mora needs you now more than ever."},
+	{"name": "Villager", "text": "Please, go to him EAST side of the village."},
+	{"name": "Villager", "text": "Follow the path and head right."},
+	{"name": "Villager", "text": "He will explain everything."},
+	{"name": "Villager", "text": "He will be fending off Malakron's fodder."}
+	
 ]

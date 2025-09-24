@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpe5fpki0wegs"]
+
+[ext_resource type="Script" uid="uid://b35r70vybhf58" path="res://Dialogue/deserter_npc_dialogue.gd" id="1_golgv"]
+[ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_v07mg"]
+
+[node name="deserter_npc_dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_golgv")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -39.0
+offset_top = -55.0
+offset_right = 39.0
+offset_bottom = -15.0
+texture = ExtResource("1_v07mg")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 185.0
+offset_bottom = 26.0
+scale = Vector2(0.4, 0.4)
+text = "Name:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 10.0
+offset_right = 243.0
+offset_bottom = 103.0
+scale = Vector2(0.3, 0.3)
+text = "Chatting:"

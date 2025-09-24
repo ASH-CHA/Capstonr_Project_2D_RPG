@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://brxrjei6jdvpl"]
+
+[ext_resource type="Texture2D" uid="uid://k8ss01gig6p3" path="res://assets/npcs/Warrior-Blue.png" id="1_afp8y"]
+[ext_resource type="Script" uid="uid://ccqs4x66aeqef" path="res://Scripts/survivor_npc.gd" id="1_mr28f"]
+[ext_resource type="PackedScene" uid="uid://dk41l684kjy17" path="res://Dialogue/survivor_npc_dialogue.tscn" id="3_b6mhh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr28f"]
+atlas = ExtResource("1_afp8y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6mhh"]
+atlas = ExtResource("1_afp8y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akpgj"]
+atlas = ExtResource("1_afp8y")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpjom"]
+atlas = ExtResource("1_afp8y")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4x35q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr28f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6mhh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akpgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpjom")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pktyi"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afp8y"]
+radius = 17.0
+
+[node name="survivor_npc" type="CharacterBody2D"]
+script = ExtResource("1_mr28f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4x35q")
+animation = &"idle_left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pktyi")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+shape = SubResource("CircleShape2D_afp8y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="survivor_npc_dialogue" parent="." instance=ExtResource("3_b6mhh")]
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="survivor_npc_dialogue" to="." method="_on_survivor_npc_dialogue_dialogue_finished"]

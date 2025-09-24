@@ -1,8 +1,9 @@
 [
-	{"name": "Village Soldier", "text": "Beyond this forest lie monsters of Chaos."},
-	{"name": "Village Soldier", "text": "Head EAST to reach Malakron's castle and defeat him and his forces."},
-	{"name": "Village Soldier", "text": "Defeat them, and the shadows will fade."},
-	{"name": "Village Soldier", "text": "But beware—stronger enemies roam further away."},
+	{"name": "Village Soldier", "text": "Heron, your path leads EAST—straight into the Desert, and beyond it, Malakron’s Castle."},
+	{"name": "Village Soldier", "text": "But beware. The desert is harsh, crawling with deadly foes."},
+	{"name": "Village Soldier", "text": "And further still lies the Corruption, a land already consumed by Malakron’s darkness."},
+	{"name": "Village Soldier", "text": "Few who enter return..."},
+	{"name": "Village Soldier", "text": "Steel yourself, for danger grows with every step toward his fortress."},
 	{"name": "Village Soldier", "text": "Malakron himself, is close to impossible to defeat."},
 	{"name": "Village Soldier", "text": "The fate of Mora depends on you!"}
 ]

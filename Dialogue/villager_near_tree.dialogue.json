@@ -1,6 +1,14 @@
 [
-	{"name": "Villager", "text": "Collecting food and potions heals yourself."},
-	{"name": "Villager", "text": "Go near this apple tree and press the E key to collect an apple."},
-	{"name": "Villager", "text": "You can press the I key to see the apple in your inventory."},
-	{"name": "Villager", "text": "It will take 1 minute to collect another apple from the same tree."}
+	{"name": "Villager", "text": "You're Heron!"},
+	{"name": "Villager", "text": "...You're looking for the chief?"},
+	{"name": "Villager", "text": "If you follow this path, you will find him."},
+	{"name": "Villager", "text": "However, I think if you're speaking with him, he will task you with defeating Lord Malakron."},
+	{"name": "Villager", "text": "If you are to endure this journey, you’ll need food."},
+	{"name": "Villager", "text": "Go near this apple tree and press the 'E' key to collect an apple."},
+	{"name": "Villager", "text": "Food and potions restore your health—use them when your HP runs low."},
+	{"name": "Villager", "text": "An apple will bring 5 HP."},
+	{"name": "Villager", "text": "You can press the 'I' key to see the apple in your inventory."},
+	{"name": "Villager", "text": "It will take 1 minute to collect another apple from the same tree."},
+	{"name": "Villager", "text": "Be sure to eat them when you're not full!"},
+	{"name": "Villager", "text": "A healthy adventurer is a living adventurer!"}
 ]

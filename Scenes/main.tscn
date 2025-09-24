@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=27 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://u7txo1k4cxth" path="res://Scenes/OrcGrunt.tscn" id="22_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://das045tklyqau" path="res://Scenes/herb_collectable.tscn" id="23_gt3je"]
 [ext_resource type="PackedScene" uid="uid://dtpdfpsyis0hj" path="res://Scenes/BluePeonOrc.tscn" id="24_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://bfu31tuxc65qu" path="res://Scenes/deserter_npc.tscn" id="25_u50mg"]
+[ext_resource type="PackedScene" uid="uid://brxrjei6jdvpl" path="res://Scenes/survivor_npc.tscn" id="26_cbgmd"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(446, -75)
@@ -64,22 +66,22 @@ position = Vector2(1861, -14)
 position = Vector2(2092, -93)
 
 [node name="Enemy8" parent="." instance=ExtResource("20_hibaj")]
-position = Vector2(1095, -120)
+position = Vector2(1368, -141)
 
 [node name="Enemy9" parent="." instance=ExtResource("21_pdsj5")]
-position = Vector2(3392, -34)
+position = Vector2(3614, -109)
 
 [node name="Enemy10" parent="." instance=ExtResource("22_ee4r6")]
-position = Vector2(3389, -106)
+position = Vector2(3821, -46)
 
 [node name="Enemy11" parent="." instance=ExtResource("24_3pmx8")]
-position = Vector2(3427, -70)
+position = Vector2(3967, -109)
 
 [node name="apple_tree" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(572, -236)
 
 [node name="apple_tree2" parent="." instance=ExtResource("11_d1ilt")]
-position = Vector2(304, -61)
+position = Vector2(188, -115)
 
 [node name="apple_tree3" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(9, -132)
@@ -99,23 +101,38 @@ position = Vector2(-16, 133)
 [node name="apple_tree8" parent="." instance=ExtResource("11_d1ilt")]
 position = Vector2(-598, -133)
 
+[node name="apple_tree9" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(822, -187)
+
+[node name="apple_tree10" parent="." instance=ExtResource("11_d1ilt")]
+position = Vector2(821, -43)
+
 [node name="health_potion_collectable" parent="." instance=ExtResource("17_h1bgf")]
-position = Vector2(820, -99)
+position = Vector2(1087, -85)
+
+[node name="health_potion_collectable2" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1369, -105)
 
 [node name="herb_collectable" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3350, -65)
+position = Vector2(3351, -79)
 
 [node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
-position = Vector2(-49.775, 41.9896)
+position = Vector2(-146, 44)
 
 [node name="village_chief" parent="." instance=ExtResource("11_k12tt")]
 position = Vector2(473, -3)
 
 [node name="villager_near_tree" parent="." instance=ExtResource("15_h1bgf")]
-position = Vector2(308, -3)
+position = Vector2(222, -71)
 
 [node name="village_soldier" parent="." instance=ExtResource("16_b3802")]
 position = Vector2(589, -164)
+
+[node name="deserter_npc" parent="." instance=ExtResource("25_u50mg")]
+position = Vector2(1084, -119)
+
+[node name="survivor_npc" parent="." instance=ExtResource("26_cbgmd")]
+position = Vector2(3350, -106)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
 position = Vector2(-445.775, 72.9896)
