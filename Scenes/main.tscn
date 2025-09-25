@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
@@ -146,13 +146,3 @@ offset_left = -38.0
 offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
-
-[node name="Collision" type="StaticBody2D" parent="."]
-
-[node name="Collision_Heron_House" type="CollisionPolygon2D" parent="Collision"]
-position = Vector2(571.225, -188.01)
-polygon = PackedVector2Array(-1027.22, 252.01, -1031.22, 249.01, -1085.22, 249.01, -1081.22, 166.01, -994.225, 164.01, -989.225, 170.01, -988.225, 246.01, -1008.22, 249.01, -1006.22, 257.01, -979.225, 255.01, -977.225, 217.01, -978.225, 167.01, -987.225, 159.01, -1086.22, 160.01, -1089.22, 168.01, -1091.22, 240.01, -1090.22, 255.01, -1027.22, 257.01)
-
-[node name="Collision_Town" type="CollisionPolygon2D" parent="Collision"]
-position = Vector2(584, -187)
-polygon = PackedVector2Array(-1246.78, 365.99, 264, 375, 269, -209, -1254.78, -193.01, -1254.78, -207.01, 268.225, -211.01, 264.225, 373.99, 265.225, 561.99, -1257.78, 554.99, -1261.78, -201.01, -1255.78, -201.01, -1255.78, -191.01)

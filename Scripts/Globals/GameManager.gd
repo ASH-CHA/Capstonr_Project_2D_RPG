@@ -11,7 +11,8 @@ var enemy_stats = {
 	"RedPeonOrc" : 60,
 	"BlueMage" : 90,
 	"BluePeonOrc" : 100,
-	"OrcGrunt" : 120
+	"OrcGrunt" : 120,
+	"Malakron" : 200
 }
 
 var player_position : Vector2

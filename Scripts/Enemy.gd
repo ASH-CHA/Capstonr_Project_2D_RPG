@@ -45,5 +45,7 @@ func _on_body_entered(body):
 			get_tree().change_scene_to_file("res://Scenes/combat_bluemage.tscn")
 		elif enemy_type == "BluePeonOrc":
 			get_tree().change_scene_to_file("res://Scenes/combat_bluepeonorc.tscn")
-		else:
+		elif enemy_type == "OrcGrunt":
 			get_tree().change_scene_to_file("res://Scenes/combat_orcgrunt.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/combat_malakron.tscn")
