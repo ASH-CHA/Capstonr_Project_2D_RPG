@@ -1,5 +1,7 @@
 extends Node
 
+var player_start_position: Vector2 = Vector2.ZERO
+
 var enemy_stats = {
 	"Bat" : 35,
 	"Spider" : 50,
