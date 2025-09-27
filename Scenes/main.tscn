@@ -146,3 +146,6 @@ offset_left = -38.0
 offset_top = -85.0
 offset_right = 37.0
 offset_bottom = -12.0
+
+[node name="Lord_Chaos_Castle" type="Node2D" parent="."]
+position = Vector2(5415, -973)
