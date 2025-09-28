@@ -26,7 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://dtpdfpsyis0hj" path="res://Scenes/BluePeonOrc.tscn" id="24_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://bfu31tuxc65qu" path="res://Scenes/deserter_npc.tscn" id="25_u50mg"]
 [ext_resource type="PackedScene" uid="uid://brxrjei6jdvpl" path="res://Scenes/survivor_npc.tscn" id="26_cbgmd"]
-[ext_resource type="PackedScene" uid="uid://smqnujipi0eq" path="res://Scenes/Malakron.tscn" id="27_1w6v2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbgmd"]
+size = Vector2(84, 112)
 
 [node name="Main" type="Node2D"]
 position = Vector2(446, -75)
@@ -151,5 +153,10 @@ offset_bottom = -12.0
 [node name="Lord_Chaos_Castle" type="Node2D" parent="."]
 position = Vector2(5415, -973)
 
-[node name="Enemy12" parent="." instance=ExtResource("27_1w6v2")]
-position = Vector2(-341, 40)
+[node name="change_castle_scene" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="change_castle_scene"]
+position = Vector2(5420, -334)
+shape = SubResource("RectangleShape2D_cbgmd")
+
+[connection signal="body_entered" from="change_castle_scene" to="." method="_on_change_castle_scene_body_entered"]
