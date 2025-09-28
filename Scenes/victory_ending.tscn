@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cinpnxr2sudn1"]
+
+[ext_resource type="Script" uid="uid://cxip5fbbgsntc" path="res://Scenes/victory_ending.gd" id="1_u3574"]
+[ext_resource type="Texture2D" uid="uid://csup20yo8djv0" path="res://Resources/Victory.png" id="2_lockc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0w408"]
+texture = ExtResource("2_lockc")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw3yq"]
+bg_color = Color(1, 0.811765, 0.745098, 0.745098)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="VictoryEnding" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3574")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1145.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0w408")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 607.0
+offset_right = 712.0
+offset_bottom = 646.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_iw3yq")
+text = "Return to Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_exit_pressed"]

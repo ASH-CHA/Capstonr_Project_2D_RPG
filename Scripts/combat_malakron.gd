@@ -40,6 +40,7 @@ func _on_attack_pressed():
 
 		if enemy_hp <= 0:
 			_victory()
+			get_tree().change_scene_to_file("res://Scenes/victory_ending.tscn")
 		else:
 			player_turn = false
 			get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
