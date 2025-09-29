@@ -124,8 +124,8 @@ func _victory():
 	defend_button.disabled = true
 	run_button.disabled = true
 	enemy_animated_sprite.play("death")
-
-	get_tree().create_timer(3.0).timeout.connect(_return_to_world)
+	
+	get_tree().create_timer(3.0).timeout.connect(_you_win)
 
 func _defeat():
 	combat_log.text = "You have fallen before Malakron..."
@@ -136,8 +136,8 @@ func _defeat():
 
 
 # --- YOU WIN / GAME OVER ---
-func _return_to_world():
-	get_tree().change_scene_to_file("res://Scenes/win.tscn")
+func _you_win():
+	get_tree().change_scene_to_file("res://Scenes/victory_ending.tscn")
 
 func _game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
