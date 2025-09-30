@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhg04am7oc3d"]
+
+[ext_resource type="Script" uid="uid://bae2lrkohb7p6" path="res://Dialogue/malakron_dialogue.gd" id="1_16r8y"]
+[ext_resource type="Texture2D" uid="uid://uxgjq75kco5e" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Hud_Ui/item_box_hud.png" id="1_lnqss"]
+
+[node name="Malakron_Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_16r8y")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -297.0
+offset_top = -1403.0
+offset_right = -130.0
+offset_bottom = -1335.0
+texture = ExtResource("1_lnqss")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 25.0
+scale = Vector2(0.8, 0.8)
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 23.0
+offset_right = 405.0
+offset_bottom = 131.0
+scale = Vector2(0.4, 0.4)
+text = "Is Chatting:"

@@ -10,16 +10,38 @@ var combat_triggered = false
 @onready var hp_label: Label = $HPLabel
 #@onready var enemy = get_parent().get_node("Spider")
 
+#func _ready():
+#	animated_sprite_2d.play("idle_down")
+#	var player = get_tree().get_root().get_node("Main/Player")
+#	player.global_position = GameManager.player_position
+#	
+#	hp_label.text = str(GameManager.player_hp) + " / " + str(GameManager.player_max_hp)
+#	update_hp_label()
+#	
+#	# Connects signal so HP label updates immediately when items are used
+#	inv.hp_changed.connect(update_hp_label)
+
 func _ready():
 	animated_sprite_2d.play("idle_down")
-	var player = get_tree().get_root().get_node("Main/Player")
-	player.global_position = GameManager.player_position
 	
+	# restore saved position if available (avoid overwriting first-time start)
+	if GameManager.player_position != null and GameManager.player_position != Vector2.ZERO:
+		global_position = GameManager.player_position
+
 	hp_label.text = str(GameManager.player_hp) + " / " + str(GameManager.player_max_hp)
 	update_hp_label()
 	
-	# Connects signal so HP label updates immediately when items are used
-	inv.hp_changed.connect(update_hp_label)
+	if inv:
+		inv.hp_changed.connect(update_hp_label)
+
+	# Ensure inv is assigned. If not assigned in the Inspector, try loading the default file.
+	if inv == null:
+		var res = ResourceLoader.load("res://Resources/player_inv.tres")
+		if res:
+			inv = res
+		else:
+			push_warning("PlayerMovement: no inventory assigned and default not found at res://Resources/player_inv.tres")
+
 
 func _physics_process(_delta):
 	read_input()

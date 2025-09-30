@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://bem7x70qeeem6"]
+[gd_scene load_steps=27 format=3 uid="uid://bem7x70qeeem6"]
 
 [ext_resource type="Script" uid="uid://dl6w7sywde0kg" path="res://Scripts/after_combat.gd" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dsxbc3tqxbkr0" path="res://Scenes/Town.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cy5jaeum0fkgy" path="res://Scenes/Player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://o25ms4401l4s" path="res://Scenes/Spider.tscn" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://dohwe6yry3564" path="res://Scenes/town.gd" id="3_fdnlq"]
-[ext_resource type="Resource" uid="uid://crtkqyvhsvkk3" path="res://Resources/player_inv.tres" id="4_344ge"]
 [ext_resource type="PackedScene" uid="uid://c6ci28fm44j7o" path="res://Scenes/Bat.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://w02qgidw6o2u" path="res://Scenes/inv_ui.tscn" id="5_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://cw2emlx8wh56i" path="res://Scenes/Slime.tscn" id="6_21xkr"]
@@ -14,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
@@ -28,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://brxrjei6jdvpl" path="res://Scenes/survivor_npc.tscn" id="26_cbgmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbgmd"]
-size = Vector2(84, 112)
+size = Vector2(84, 114)
 
 [node name="Main" type="Node2D"]
 position = Vector2(446, -75)
@@ -138,8 +137,7 @@ position = Vector2(1084, -119)
 position = Vector2(3350, -106)
 
 [node name="Player" parent="." instance=ExtResource("2_8gbba")]
-position = Vector2(-445.775, 72.9896)
-inv = ExtResource("4_344ge")
+position = Vector2(-446, 76)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -156,7 +154,7 @@ position = Vector2(5419, -427)
 [node name="change_castle_scene" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="change_castle_scene"]
-position = Vector2(5420, -334)
+position = Vector2(5420, -332)
 shape = SubResource("RectangleShape2D_cbgmd")
 
 [connection signal="body_entered" from="change_castle_scene" to="." method="_on_change_castle_scene_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=95 format=3 uid="uid://cy5jaeum0fkgy"]
+[gd_scene load_steps=96 format=3 uid="uid://cy5jaeum0fkgy"]
 
 [ext_resource type="Script" uid="uid://d114235r27ucu" path="res://Scripts/Player_Movement.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://ckai0mpomxy81" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_down_anim_strip_6.png" id="1_rpqav"]
+[ext_resource type="Resource" uid="uid://crtkqyvhsvkk3" path="res://Resources/player_inv.tres" id="2_1e7my"]
 [ext_resource type="Texture2D" uid="uid://iuc4y0ldfei" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_attack_down_anim_strip_6.png" id="2_miouo"]
 [ext_resource type="Texture2D" uid="uid://ca822m2ae8w1g" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_idle_left_anim_strip_6.png" id="3_megsn"]
 [ext_resource type="Texture2D" uid="uid://5cgh6upbnygv" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_down_anim_strip_6.png" id="3_nn08x"]
@@ -634,6 +635,7 @@ size = Vector2(6, 8)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_kyqiw")
+inv = ExtResource("2_1e7my")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bhhdu")
