@@ -132,7 +132,7 @@ func _defeat():
 	attack_button.disabled = true
 	defend_button.disabled = true
 	run_button.disabled = true
-	get_tree().create_timer(2.0).timeout.connect(_game_over)
+	get_tree().create_timer(3.0).timeout.connect(_game_over)
 
 
 # --- YOU WIN / GAME OVER ---

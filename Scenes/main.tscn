@@ -115,8 +115,59 @@ position = Vector2(1087, -85)
 [node name="health_potion_collectable2" parent="." instance=ExtResource("17_h1bgf")]
 position = Vector2(1369, -105)
 
+[node name="health_potion_collectable3" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1417, 257)
+
+[node name="health_potion_collectable4" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1821, 224)
+
+[node name="health_potion_collectable5" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1957, -22)
+
+[node name="health_potion_collectable6" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1969, -40)
+
+[node name="health_potion_collectable7" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(1981, -20)
+
+[node name="health_potion_collectable8" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(2780, -97)
+
+[node name="health_potion_collectable9" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(2831, 141)
+
+[node name="health_potion_collectable10" parent="." instance=ExtResource("17_h1bgf")]
+position = Vector2(3108, -200)
+
 [node name="herb_collectable" parent="." instance=ExtResource("23_gt3je")]
 position = Vector2(3351, -79)
+
+[node name="herb_collectable2" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3445, -89)
+
+[node name="herb_collectable3" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3438, -30)
+
+[node name="herb_collectable4" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3483, 12)
+
+[node name="herb_collectable5" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3589, 41)
+
+[node name="herb_collectable6" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3662, -226)
+
+[node name="herb_collectable7" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3724, -65)
+
+[node name="herb_collectable8" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3713, -217)
+
+[node name="herb_collectable9" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3769, -298)
+
+[node name="herb_collectable10" parent="." instance=ExtResource("23_gt3je")]
+position = Vector2(3773, -224)
 
 [node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
 position = Vector2(-146, 44)
