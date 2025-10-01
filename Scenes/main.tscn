@@ -143,31 +143,31 @@ position = Vector2(3108, -200)
 position = Vector2(3351, -79)
 
 [node name="herb_collectable2" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3445, -89)
+position = Vector2(3673, -129)
 
 [node name="herb_collectable3" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3438, -30)
+position = Vector2(3723, 8)
 
 [node name="herb_collectable4" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3483, 12)
+position = Vector2(3884, -158)
 
 [node name="herb_collectable5" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3589, 41)
+position = Vector2(4044, 57)
 
 [node name="herb_collectable6" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3662, -226)
+position = Vector2(3997, -326)
 
 [node name="herb_collectable7" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3724, -65)
+position = Vector2(4131, -188)
 
 [node name="herb_collectable8" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3713, -217)
+position = Vector2(4292, 64)
 
 [node name="herb_collectable9" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3769, -298)
+position = Vector2(4481, -46)
 
 [node name="herb_collectable10" parent="." instance=ExtResource("23_gt3je")]
-position = Vector2(3773, -224)
+position = Vector2(4557, -2)
 
 [node name="village_npc" parent="." instance=ExtResource("13_fdnlq")]
 position = Vector2(-146, 44)
