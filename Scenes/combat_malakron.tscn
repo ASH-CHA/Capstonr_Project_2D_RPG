@@ -19,10 +19,10 @@ texture = ExtResource("2_52ium")
 expand_mode = 1
 
 [node name="PlayerHealth" type="Label" parent="."]
-offset_left = 344.0
-offset_top = 164.0
-offset_right = 435.0
-offset_bottom = 187.0
+offset_left = 341.333
+offset_top = 134.667
+offset_right = 432.333
+offset_bottom = 157.667
 text = "Heron's HP:"
 horizontal_alignment = 1
 
@@ -35,25 +35,25 @@ text = "Malakron's HP: "
 horizontal_alignment = 1
 
 [node name="AttackButton" type="Button" parent="."]
-offset_left = 452.0
-offset_top = 396.667
-offset_right = 516.0
-offset_bottom = 427.667
+offset_left = 438.667
+offset_top = 393.333
+offset_right = 502.667
+offset_bottom = 424.333
 text = "Attack"
 
 [node name="DefendButton" type="Button" parent="."]
-offset_left = 539.333
-offset_top = 396.0
-offset_right = 604.333
-offset_bottom = 429.0
+offset_left = 529.333
+offset_top = 392.0
+offset_right = 594.333
+offset_bottom = 425.0
 text = "Defend
 "
 
 [node name="RunButton" type="Button" parent="."]
-offset_left = 624.667
-offset_top = 396.667
-offset_right = 746.667
-offset_bottom = 427.667
+offset_left = 618.0
+offset_top = 393.333
+offset_right = 740.0
+offset_bottom = 424.333
 text = "Cannot Escape"
 
 [node name="CombatLog" type="Label" parent="."]
@@ -65,7 +65,7 @@ text = "Combat Begins"
 horizontal_alignment = 1
 
 [node name="PlayerCombat" parent="." instance=ExtResource("3_52ium")]
-position = Vector2(391, 291)
+position = Vector2(385.333, 286)
 scale = Vector2(5, 5)
 
 [node name="Enemy" parent="." instance=ExtResource("2_f802s")]
