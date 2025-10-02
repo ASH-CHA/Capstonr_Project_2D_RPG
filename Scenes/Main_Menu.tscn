@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://be4vexhesakde" path="res://Resources/Morgan.ttf" id="1_c4tk2"]
 [ext_resource type="Texture2D" uid="uid://bcbsvtjjoso73" path="res://Resources/Main_menu_screen.png" id="1_rmbjf"]
 [ext_resource type="AudioStream" uid="uid://dv2jelo7tvcwi" path="res://assets/Music/Ballad of Ashenwood.mp3" id="4_00u4r"]
-[ext_resource type="PackedScene" uid="uid://dskvxkuj7hfld" path="res://Scenes/fade_transition.tscn" id="4_anlgx"]
+[ext_resource type="PackedScene" uid="uid://ck3qst8cbcqok" path="res://Scenes/fade_transition.tscn" id="4_anlgx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7rmo"]
 texture = ExtResource("1_rmbjf")

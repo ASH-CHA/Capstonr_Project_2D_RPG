@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://b2bkgeigkgu7b"]
 
-[ext_resource type="Script" uid="uid://dei8lahvblmgl" path="res://Scenes/inside_castle.gd" id="1_2pjam"]
+[ext_resource type="Script" path="res://Scenes/inside_castle.gd" id="1_2pjam"]
 [ext_resource type="Texture2D" uid="uid://cb8qdnhqqxsn1" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Lord_Chaos_Castle_Inside.png" id="1_05sjo"]
 [ext_resource type="Texture2D" uid="uid://cp22f7ychj4xj" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Dungeon_Tileset.png" id="2_5dv1v"]
 [ext_resource type="Texture2D" uid="uid://ltse78nqo4jf" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Inside_Castle2.png" id="3_5dv1v"]
