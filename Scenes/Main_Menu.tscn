@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx2idsw3l7mxr"]
+[gd_scene load_steps=8 format=3 uid="uid://dx2idsw3l7mxr"]
 
 [ext_resource type="Script" uid="uid://1cse2ppbj4ap" path="res://Scenes/main_menu.gd" id="1_b7rmo"]
 [ext_resource type="FontFile" uid="uid://be4vexhesakde" path="res://Resources/Morgan.ttf" id="1_c4tk2"]
 [ext_resource type="Texture2D" uid="uid://bcbsvtjjoso73" path="res://Resources/Main_menu_screen.png" id="1_rmbjf"]
 [ext_resource type="AudioStream" uid="uid://dv2jelo7tvcwi" path="res://assets/Music/Ballad of Ashenwood.mp3" id="4_00u4r"]
+[ext_resource type="PackedScene" uid="uid://dskvxkuj7hfld" path="res://Scenes/fade_transition.tscn" id="4_anlgx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b7rmo"]
 texture = ExtResource("1_rmbjf")
@@ -97,9 +98,20 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_hckgo")
 text = "Exit"
 
+[node name="fade_transition" parent="." instance=ExtResource("4_anlgx")]
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1152.0
+offset_bottom = 655.0
+
+[node name="fade_timer" type="Timer" parent="fade_transition"]
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_00u4r")
 autoplay = true
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]
