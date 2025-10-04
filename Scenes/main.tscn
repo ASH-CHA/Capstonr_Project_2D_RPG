@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
