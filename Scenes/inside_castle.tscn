@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://das045tklyqau" path="res://Scenes/herb_collectable.tscn" id="6_7sxxc"]
 [ext_resource type="PackedScene" uid="uid://w02qgidw6o2u" path="res://Scenes/inv_ui.tscn" id="7_g1sgc"]
 [ext_resource type="AudioStream" uid="uid://dsnsr3mtf88l7" path="res://assets/Music/Blood and Honor.mp3" id="8_1rjge"]
-[ext_resource type="PackedScene" path="res://Dialogue/malakron_dialogue.tscn" id="10_q8jnp"]
+[ext_resource type="PackedScene" uid="uid://bxhg04am7oc3d" path="res://Dialogue/malakron_dialogue.tscn" id="10_q8jnp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pjam"]
 texture = ExtResource("1_05sjo")
