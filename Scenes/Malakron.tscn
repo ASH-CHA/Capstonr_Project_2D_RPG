@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://smqnujipi0eq"]
+[gd_scene load_steps=22 format=3 uid="uid://smqnujipi0eq"]
 
 [ext_resource type="PackedScene" uid="uid://wqahus4xleu" path="res://Scenes/Enemy.tscn" id="1_iok75"]
 [ext_resource type="Texture2D" uid="uid://cuwo6julxvkrl" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Transparent_Lord_Chaos_Sprite.png" id="3_rd3tr"]
@@ -47,10 +47,6 @@ region = Rect2(620, 624, 155, 156)
 atlas = ExtResource("3_rd3tr")
 region = Rect2(775, 624, 155, 156)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m1no4"]
-atlas = ExtResource("3_rd3tr")
-region = Rect2(155, 780, 155, 156)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_nh7v7"]
 atlas = ExtResource("3_rd3tr")
 region = Rect2(310, 780, 155, 156)
@@ -58,10 +54,6 @@ region = Rect2(310, 780, 155, 156)
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8j3h"]
 atlas = ExtResource("3_rd3tr")
 region = Rect2(465, 780, 155, 156)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qwsv"]
-atlas = ExtResource("3_rd3tr")
-region = Rect2(775, 156, 155, 156)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jeh3e"]
 atlas = ExtResource("3_rd3tr")
@@ -135,16 +127,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m1no4")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_nh7v7")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q8j3h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2qwsv")
 }],
 "loop": true,
 "name": &"death",
@@ -183,5 +169,4 @@ enemy_type = "Malakron"
 [node name="AnimatedSprite2D" parent="." index="0"]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_ov5p5")
-animation = &"hit_right"
-frame_progress = 0.11618
+animation = &"death"

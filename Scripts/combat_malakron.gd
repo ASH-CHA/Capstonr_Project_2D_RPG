@@ -40,7 +40,6 @@ func _on_attack_pressed():
 
 		if enemy_hp <= 0:
 			_victory()
-			get_tree().change_scene_to_file("res://Scenes/victory_ending.tscn")
 		else:
 			player_turn = false
 			get_tree().create_timer(1.0).timeout.connect(_enemy_attack)
@@ -132,6 +131,7 @@ func _defeat():
 	attack_button.disabled = true
 	defend_button.disabled = true
 	run_button.disabled = true
+	
 	get_tree().create_timer(3.0).timeout.connect(_game_over)
 
 

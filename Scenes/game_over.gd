@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	$fade_transition/AnimationPlayer.play("fade_out")
+
 func _on_start_pressed() -> void:
 	GameManager.player_position = GameManager.player_start_position
 	GameManager.player_hp = GameManager.player_max_hp

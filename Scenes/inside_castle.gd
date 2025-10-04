@@ -6,6 +6,7 @@ extends Node2D
 @onready var malakron_dialogue = $Malakron_Dialogue  # the Control node with your dialogue script
 
 func _ready():
+	$fade_transition/AnimationPlayer.play("fade_out")
 	player.global_position = Vector2(0, 0)
 	malakron_dialogue.dialogue_finished.connect(_on_dialogue_finished)
 

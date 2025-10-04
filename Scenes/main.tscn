@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cvwdkna1a4v" path="res://Scenes/RedMage.tscn" id="9_b3802"]
 [ext_resource type="PackedScene" uid="uid://dws1ierga1fwm" path="res://Scenes/apple_tree.tscn" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://be83qjuhqihwe" path="res://Scenes/village_chief.tscn" id="11_k12tt"]
-[ext_resource type="PackedScene" uid="uid://co2d078nlygbw" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" path="res://Scenes/village_npc.tscn" id="13_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://burms54kmmwul" path="res://Scenes/villager_near_tree.tscn" id="15_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://dfbe6p0elfyu1" path="res://Scenes/village_soldier.tscn" id="16_b3802"]
 [ext_resource type="PackedScene" uid="uid://dptu7ct43km1u" path="res://Scenes/health_potion_collectable.tscn" id="17_h1bgf"]
@@ -263,4 +263,14 @@ offset_top = -33.0
 offset_right = -251.0
 offset_bottom = 185.0
 
+[node name="fade_transition2" parent="." instance=ExtResource("26_1w6v2")]
+visible = false
+offset_left = 5077.0
+offset_top = -514.0
+offset_right = 5757.0
+offset_bottom = -112.0
+
+[node name="fade_timer" type="Timer" parent="fade_transition2"]
+
 [connection signal="body_entered" from="change_castle_scene" to="." method="_on_change_castle_scene_body_entered"]
+[connection signal="timeout" from="fade_transition2/fade_timer" to="." method="_on_fade_timer_timeout"]

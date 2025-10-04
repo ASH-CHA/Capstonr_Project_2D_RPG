@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbn21xufhkmha"
+path="res://.godot/imported/Moonlit Vale.mp3-91878c99e62f6ddb59453842ad7e9a01.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Moonlit Vale.mp3"
+dest_files=["res://.godot/imported/Moonlit Vale.mp3-91878c99e62f6ddb59453842ad7e9a01.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

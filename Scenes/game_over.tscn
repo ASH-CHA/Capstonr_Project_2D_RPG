@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6bld1uxm48kv"]
+[gd_scene load_steps=8 format=3 uid="uid://c6bld1uxm48kv"]
 
 [ext_resource type="Script" uid="uid://cp0ad6fkcum48" path="res://Scenes/game_over.gd" id="1_8fo1c"]
 [ext_resource type="Texture2D" uid="uid://dnovhudj2pgif" path="res://Resources/Game_over.png" id="2_ek8ke"]
 [ext_resource type="AudioStream" uid="uid://c14bropfxj686" path="res://assets/Music/Left-Behind.mp3" id="3_ek8ke"]
+[ext_resource type="PackedScene" uid="uid://ck3qst8cbcqok" path="res://Scenes/fade_transition.tscn" id="3_eoghk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoghk"]
 texture = ExtResource("2_ek8ke")
@@ -76,6 +77,13 @@ offset_bottom = 522.0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Retry?"
+
+[node name="fade_transition" parent="." instance=ExtResource("3_eoghk")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1179.0
+offset_bottom = 696.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ek8ke")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=4 uid="uid://b2bkgeigkgu7b"]
+[gd_scene load_steps=28 format=4 uid="uid://b2bkgeigkgu7b"]
 
-[ext_resource type="Script" path="res://Scenes/inside_castle.gd" id="1_2pjam"]
+[ext_resource type="Script" uid="uid://dei8lahvblmgl" path="res://Scenes/inside_castle.gd" id="1_2pjam"]
 [ext_resource type="Texture2D" uid="uid://cb8qdnhqqxsn1" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Lord_Chaos_Castle_Inside.png" id="1_05sjo"]
 [ext_resource type="Texture2D" uid="uid://cp22f7ychj4xj" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Dungeon_Tileset.png" id="2_5dv1v"]
 [ext_resource type="Texture2D" uid="uid://ltse78nqo4jf" path="res://assets/Zelda-Style/Top_Down_Adventure_Pack_v.1.0/Inside_Castle2.png" id="3_5dv1v"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://das045tklyqau" path="res://Scenes/herb_collectable.tscn" id="6_7sxxc"]
 [ext_resource type="PackedScene" uid="uid://w02qgidw6o2u" path="res://Scenes/inv_ui.tscn" id="7_g1sgc"]
 [ext_resource type="AudioStream" uid="uid://dsnsr3mtf88l7" path="res://assets/Music/Blood and Honor.mp3" id="8_1rjge"]
+[ext_resource type="PackedScene" uid="uid://ck3qst8cbcqok" path="res://Scenes/fade_transition.tscn" id="10_fuuoa"]
 [ext_resource type="PackedScene" uid="uid://bxhg04am7oc3d" path="res://Dialogue/malakron_dialogue.tscn" id="10_q8jnp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pjam"]
@@ -19072,6 +19073,12 @@ offset_left = -37.0
 offset_top = -93.0
 offset_right = 38.0
 offset_bottom = -20.0
+
+[node name="fade_transition" parent="." instance=ExtResource("10_fuuoa")]
+offset_left = -415.0
+offset_top = -720.0
+offset_right = -24.0
+offset_bottom = -494.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-628, -875)
